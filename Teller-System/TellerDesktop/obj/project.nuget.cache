@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "9TYVAxSZ4IMy8TBQSajwhLBITpZfuecYZ0BRuSiHodnjSxpwqfAI6zJl8xotWXDq34Ah3ZOSmdIbHKRNHFrMAw==",
+  "dgSpecHash": "+CxfHrp5NWCQtiLjzdNHHQHKxXVi642D0JtUDYa/PFEpnY6SAxUqZvvAMjwrCskixNjPVaT9r79J/LNw9azPOw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Abo_Arrab\\source\\repos\\Teller-System\\Teller-System\\TellerDesktop\\TellerDesktop.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Abo_Arrab\\.nuget\\packages\\fody\\6.5.1\\fody.6.5.1.nupkg.sha512",
+    "C:\\Users\\Abo_Arrab\\.nuget\\packages\\propertychanged.fody\\3.4.0\\propertychanged.fody.3.4.0.nupkg.sha512"
+  ],
   "logs": []
 }
