@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <FontFamily x:Key="TRegular">pack://application;,,,/Resources/Fonts/#Tajawal Regular</FontFamily>
+    <FontFamily x:Key="TBlack">pack://application;,,,/Resources/Fonts/#Tajawal Black</FontFamily>
+    <FontFamily x:Key="TBold">pack://application;,,,/Resources/Fonts/#Tajawal Bold</FontFamily>
+    <FontFamily x:Key="TExtraBold">pack://application;,,,/Resources/Fonts/#Tajawal ExtraBold</FontFamily>
+    <FontFamily x:Key="TExtraLight">pack://application;,,,/Resources/Fonts/#Tajawal ExtraLight</FontFamily>
+    <FontFamily x:Key="TLight">pack://application;,,,/Resources/Fonts/#Tajawal Light</FontFamily>
+    <FontFamily x:Key="TMedium">pack://application;,,,/Resources/Fonts/#Tajawal Medium</FontFamily>
+</ResourceDictionary>

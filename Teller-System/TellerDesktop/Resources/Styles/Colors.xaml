@@ -1,0 +1,38 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Color x:Key="MainDark">#5D6B99</Color>
+    <SolidColorBrush x:Key="MainDarkBrush" Color="#5D6B99"/>
+
+    <Color x:Key="MainLight">#CCD5F0</Color>
+    <SolidColorBrush x:Key="MainLightBrush" Color="#CCD5F0"/>
+
+    <Color x:Key="AcceptDark">#327B2E</Color>
+    <SolidColorBrush x:Key="AcceptDarkBrush" Color="#327B2E"/>
+
+    <Color x:Key="AcceptLight">#339933</Color>
+    <SolidColorBrush x:Key="AcceptLightBrush" Color="#339933"/>
+
+    <Color x:Key="WarningDark">#D61100</Color>
+    <SolidColorBrush x:Key="WarningDarkBrush" Color="#D61100"/>
+
+    <Color x:Key="WarningLight">#FF0000</Color>
+    <SolidColorBrush x:Key="WarningLightBrush" Color="#FF0000"/>
+
+    <Color x:Key="DisabledGray">#A8AEC3</Color>
+    <SolidColorBrush x:Key="DisabledGrayBrush" Color="#A8AEC3"/>
+
+    <Color x:Key="White">#FFFFFF</Color>
+    <SolidColorBrush x:Key="WhiteBrush" Color="#FFFFFF"/>
+
+    <Color x:Key="LightGray">#E1E1E1</Color>
+    <SolidColorBrush x:Key="LightGrayBrush" Color="#E1E1E1"/>
+
+    <Color x:Key="Gray">#AAAAAA</Color>
+    <SolidColorBrush x:Key="GrayBrush" Color="#AAAAAA"/>
+
+    <Color x:Key="DarkGray">#666666</Color>
+    <SolidColorBrush x:Key="DarkGrayBrush" Color="#666666"/>
+
+    <Color x:Key="Dark">#000000</Color>
+    <SolidColorBrush x:Key="DarkBrush" Color="#000000"/>
+</ResourceDictionary>
