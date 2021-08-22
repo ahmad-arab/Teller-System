@@ -41,6 +41,10 @@ namespace TellerDesktop.Controls
             RaiseEvent(newEventArgs);
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonsList.Visibility = (ButtonsList.Visibility == Visibility.Visible) ? Visibility.Hidden : Visibility.Visible;
+        }
     }
     public class MainMenuButtonClickedEventArgs: RoutedEventArgs
     {
