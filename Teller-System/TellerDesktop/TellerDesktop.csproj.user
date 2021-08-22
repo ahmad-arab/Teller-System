@@ -7,6 +7,14 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Controls\MainMenuPopup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Controls\MainMenuPopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -17,6 +25,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Styles\ComboBoxes.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Styles\DatePickers.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Styles\Fonts.xaml">

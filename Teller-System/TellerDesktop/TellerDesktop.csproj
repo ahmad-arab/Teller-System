@@ -7,7 +7,90 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Fonts\OFL.txt" />
+    <None Remove="Resources\Fonts\Tajawal-Black.ttf" />
+    <None Remove="Resources\Fonts\Tajawal-Bold.ttf" />
+    <None Remove="Resources\Fonts\Tajawal-ExtraBold.ttf" />
+    <None Remove="Resources\Fonts\Tajawal-ExtraLight.ttf" />
+    <None Remove="Resources\Fonts\Tajawal-Light.ttf" />
+    <None Remove="Resources\Fonts\Tajawal-Medium.ttf" />
+    <None Remove="Resources\Fonts\Tajawal-Regular.ttf" />
+    <None Remove="Resources\Images\Accounts.png" />
+    <None Remove="Resources\Images\Add.png" />
+    <None Remove="Resources\Images\Bounds.png" />
+    <None Remove="Resources\Images\CashVoucher.png" />
+    <None Remove="Resources\Images\Company.png" />
+    <None Remove="Resources\Images\CurrencyTag.png" />
+    <None Remove="Resources\Images\Delete.png" />
+    <None Remove="Resources\Images\Dots.png" />
+    <None Remove="Resources\Images\Edit.png" />
+    <None Remove="Resources\Images\ExchangeRate.png" />
+    <None Remove="Resources\Images\ExpendingVoucher.png" />
+    <None Remove="Resources\Images\Info.png" />
+    <None Remove="Resources\Images\JournalVoucher.png" />
+    <None Remove="Resources\Images\LeftArrow.png" />
+    <None Remove="Resources\Images\Notebook.png" />
+    <None Remove="Resources\Images\PaymentVoucher.png" />
+    <None Remove="Resources\Images\RightArrow.png" />
+    <None Remove="Resources\Images\Save.png" />
+    <None Remove="Resources\Images\Search.png" />
+    <None Remove="Resources\Images\StartupVoucher.png" />
+    <None Remove="Resources\Images\TellerLogo.ico" />
+    <None Remove="Resources\Images\TellerLogo.png" />
+    <None Remove="Resources\Images\Undo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="PropertyChanged.Fody" Version="3.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Fonts\OFL.txt" />
+    <Resource Include="Resources\Fonts\Tajawal-Black.ttf" />
+    <Resource Include="Resources\Fonts\Tajawal-Bold.ttf" />
+    <Resource Include="Resources\Fonts\Tajawal-ExtraBold.ttf" />
+    <Resource Include="Resources\Fonts\Tajawal-ExtraLight.ttf" />
+    <Resource Include="Resources\Fonts\Tajawal-Light.ttf" />
+    <Resource Include="Resources\Fonts\Tajawal-Medium.ttf" />
+    <Resource Include="Resources\Fonts\Tajawal-Regular.ttf" />
+    <Resource Include="Resources\Images\Accounts.png" />
+    <Resource Include="Resources\Images\Add.png" />
+    <Resource Include="Resources\Images\Bounds.png" />
+    <Resource Include="Resources\Images\CashVoucher.png" />
+    <Resource Include="Resources\Images\Company.png" />
+    <Resource Include="Resources\Images\CurrencyTag.png" />
+    <Resource Include="Resources\Images\Delete.png" />
+    <Resource Include="Resources\Images\Dots.png" />
+    <Resource Include="Resources\Images\Edit.png" />
+    <Resource Include="Resources\Images\ExchangeRate.png" />
+    <Resource Include="Resources\Images\ExpendingVoucher.png" />
+    <Resource Include="Resources\Images\Info.png" />
+    <Resource Include="Resources\Images\JournalVoucher.png" />
+    <Resource Include="Resources\Images\LeftArrow.png" />
+    <Resource Include="Resources\Images\Notebook.png" />
+    <Resource Include="Resources\Images\PaymentVoucher.png" />
+    <Resource Include="Resources\Images\RightArrow.png" />
+    <Resource Include="Resources\Images\Save.png" />
+    <Resource Include="Resources\Images\Search.png" />
+    <Resource Include="Resources\Images\StartupVoucher.png" />
+    <Resource Include="Resources\Images\TellerLogo.ico" />
+    <Resource Include="Resources\Images\TellerLogo.png" />
+    <Resource Include="Resources\Images\Undo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
