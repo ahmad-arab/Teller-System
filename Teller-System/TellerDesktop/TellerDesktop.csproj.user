@@ -10,6 +10,9 @@
     <Compile Update="Controls\MainMenuPopup.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\CompanyInfoView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Controls\MainMenuPopup.xaml">
@@ -33,7 +36,13 @@
     <Page Update="Resources\Styles\Fonts.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Resources\Styles\Tabs.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Resources\Styles\TextBoxes.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\CompanyInfoView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\App.xaml
-8-152634083
+10-460290606
 
-16904476320
-1935800843
-Controls\MainMenuPopup.xaml;MainWindow.xaml;Resources\Styles\Buttons.xaml;Resources\Styles\Colors.xaml;Resources\Styles\ComboBoxes.xaml;Resources\Styles\DatePickers.xaml;Resources\Styles\Fonts.xaml;Resources\Styles\TextBoxes.xaml;
+20-312604914
+1941028232726
+Controls\MainMenuPopup.xaml;MainWindow.xaml;Resources\Styles\Buttons.xaml;Resources\Styles\Colors.xaml;Resources\Styles\ComboBoxes.xaml;Resources\Styles\DatePickers.xaml;Resources\Styles\Fonts.xaml;Resources\Styles\Tabs.xaml;Resources\Styles\TextBoxes.xaml;Views\CompanyInfoView.xaml;
 
 True
 

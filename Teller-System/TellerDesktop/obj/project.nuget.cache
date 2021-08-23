@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "+CxfHrp5NWCQtiLjzdNHHQHKxXVi642D0JtUDYa/PFEpnY6SAxUqZvvAMjwrCskixNjPVaT9r79J/LNw9azPOw==",
+  "dgSpecHash": "lO/vxCb9LynwFn6guIey+0pP5Tvv0F6kI+poB5VUopxJHeSznw8yZEj2XE9A5AmPVYXdPPyzuPJKaU9Vx3H/Fg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Abo_Arrab\\source\\repos\\Teller-System\\Teller-System\\TellerDesktop\\TellerDesktop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Abo_Arrab\\.nuget\\packages\\fody\\6.5.1\\fody.6.5.1.nupkg.sha512",
+    "C:\\Users\\Abo_Arrab\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
     "C:\\Users\\Abo_Arrab\\.nuget\\packages\\propertychanged.fody\\3.4.0\\propertychanged.fody.3.4.0.nupkg.sha512"
   ],
   "logs": []

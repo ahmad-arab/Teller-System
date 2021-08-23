@@ -1,11 +1,11 @@
-﻿<UserControl x:Class="TellerDesktop.Controls.MainMenuPopup"
+﻿<UserControl x:Class="TellerDesktop.MainMenuPopup"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:TellerDesktop.Controls"
+             xmlns:local="clr-namespace:TellerDesktop"
              mc:Ignorable="d" 
-             d:DesignHeight="500" d:DesignWidth="400">
+             d:DesignHeight="500" d:DesignWidth="200">
     <StackPanel>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -57,31 +57,31 @@
                 </Style>
             </Border.Style>
             <StackPanel HorizontalAlignment="Stretch">
-                <Button Grid.Column="5" Style="{StaticResource MainMenuSubButton}" 
+                <Button Click="CompanyClicked" Grid.Column="5" Style="{StaticResource MainMenuSubButton}" 
                         Content="الشركة" HorizontalAlignment="Stretch">
                     <Button.Tag>
                         <ImageSource>../Resources/Images/Company.png</ImageSource>
                     </Button.Tag>
                 </Button>
-                <Button Grid.Column="5" Style="{StaticResource MainMenuSubButton}" 
+                <Button Click="AccountsClicked" Grid.Column="5" Style="{StaticResource MainMenuSubButton}" 
                         Content="الحسابات المالية" HorizontalAlignment="Stretch">
                     <Button.Tag>
                         <ImageSource>../Resources/Images/Accounts.png</ImageSource>
                     </Button.Tag>
                 </Button>
-                <Button Grid.Column="5" Style="{StaticResource MainMenuSubButton}" 
+                <Button Click="VouchersClicked" Grid.Column="5" Style="{StaticResource MainMenuSubButton}" 
                         Content="السندات المالية" HorizontalAlignment="Stretch">
                     <Button.Tag>
                         <ImageSource>../Resources/Images/Bounds.png</ImageSource>
                     </Button.Tag>
                 </Button>
-                <Button Grid.Column="5" Style="{StaticResource MainMenuSubButton}" 
+                <Button Click="NotebookClicked" Grid.Column="5" Style="{StaticResource MainMenuSubButton}" 
                         Content="المذكرة" HorizontalAlignment="Stretch">
                     <Button.Tag>
                         <ImageSource>../Resources/Images/Notebook.png</ImageSource>
                     </Button.Tag>
                 </Button>
-                <Button Grid.Column="5" Style="{StaticResource MainMenuSubButton}" 
+                <Button Click="ExchangeRateCLicked" Grid.Column="5" Style="{StaticResource MainMenuSubButton}" 
                         Content="أسعار الصرف" HorizontalAlignment="Stretch">
                     <Button.Tag>
                         <ImageSource>../Resources/Images/ExchangeRate.png</ImageSource>
