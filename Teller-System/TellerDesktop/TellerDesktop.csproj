@@ -19,6 +19,7 @@
     <None Remove="Resources\Images\Add.png" />
     <None Remove="Resources\Images\Bounds.png" />
     <None Remove="Resources\Images\CashVoucher.png" />
+    <None Remove="Resources\Images\Close.png" />
     <None Remove="Resources\Images\Company.png" />
     <None Remove="Resources\Images\CurrencyTag.png" />
     <None Remove="Resources\Images\Delete.png" />
@@ -58,6 +59,7 @@
     <Resource Include="Resources\Images\Add.png" />
     <Resource Include="Resources\Images\Bounds.png" />
     <Resource Include="Resources\Images\CashVoucher.png" />
+    <Resource Include="Resources\Images\Close.png" />
     <Resource Include="Resources\Images\Company.png" />
     <Resource Include="Resources\Images\CurrencyTag.png" />
     <Resource Include="Resources\Images\Delete.png" />

@@ -15,7 +15,8 @@ namespace TellerDesktop
         Customer = 4,
         Currency = 5,
         Company = 6,
-        Custom = 7
+        Custom = 7,
+        Employee = 8
     }
     public class FinancialAccount
     {

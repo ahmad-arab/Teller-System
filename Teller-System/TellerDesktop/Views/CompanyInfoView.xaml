@@ -3,13 +3,617 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:TellerDesktop"
+             xmlns:local="clr-namespace:TellerDesktop" 
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.DataContext>
         <local:CompanyViewModel/>
     </UserControl.DataContext>
-    <Grid Background="Blue">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--BrancheAndReps-->
+        <Grid Grid.Column="4" Grid.Row="0" Grid.RowSpan="7">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="الفروع والوكلاء" HorizontalAlignment="Right"
+                       FontFamily="{StaticResource TBold}" FontWeight="Bold"
+                       Foreground="{StaticResource MainDarkBrush}"
+                       FontSize="16" Margin="0,10,10,0"/>
+            <Border Grid.Row="1" Background="#5D6B99" CornerRadius="10"
+                Margin="10,5,10,10">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="5*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <!--SearchBranches-->
+                    <TextBox Grid.Column="1" Grid.ColumnSpan="2" 
+                             Margin="0,5,5,5" 
+                             Style="{StaticResource SearchTextBox}"
+                             Text="{Binding SearchBranchText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Button x:Name="ShowAddNewBranchView"
+                        Style="{StaticResource CircularDarkBorderlessImageButton}"
+                            Margin="5,5,5,5"
+                            Height="25" Width="40" 
+                            Content="" ToolTip="إضافة فرع جديد"
+                            HorizontalAlignment="Left"
+                            Command="{Binding AddNewBrnachCommand}">
+                        <Button.Tag>
+                            <ImageSource>/Resources/Images/Add.png</ImageSource>
+                        </Button.Tag>
+                    </Button>
+                    <!--Branches-->
+                    <ListView ItemsSource="{Binding ShownBranches}" Grid.Row="1" Grid.ColumnSpan="3"
+                              Margin="5,0,5,5" SelectedItem="{Binding SelectedBranch,Mode=TwoWay}">
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="ListBoxItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                        <ListView.ItemTemplate>
+                            <DataTemplate DataType="Branch">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Button Style="{StaticResource CircularLightBorderlessImageButton}"
+                                            Width="25" Height="25" Grid.Column="0" ToolTip="حذف الفرع">
+                                        <Button.Tag>
+                                            <ImageSource>/Resources/Images/Delete.png</ImageSource>
+                                        </Button.Tag>
+                                    </Button>
+                                    <Button Style="{StaticResource CircularLightBorderlessImageButton}"
+                                            Width="25" Height="25" Grid.Column="1" ToolTip="معلومات الفرع"
+                                            Name="ShowBranchInfo">
+                                        <Button.Tag>
+                                            <ImageSource>/Resources/Images/Info.png</ImageSource>
+                                        </Button.Tag>
+                                    </Button>
+                                    <TextBlock FontFamily="{StaticResource TRegular}"
+                                               FontSize="14" FontWeight="Normal"
+                                               Foreground="#5D6B99"
+                                               HorizontalAlignment="Right"
+                                               Grid.Column="3"
+                                               Text="{Binding Name}"
+                                               TextAlignment="Right"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+
+                    </ListView>
+                    
+                    <!--SearchReps-->
+                    <TextBox Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" 
+                             Margin="0,5,5,5" 
+                             Style="{StaticResource SearchTextBox}"
+                             Text="{Binding SearchRepText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Button Grid.Row="2"
+                        Style="{StaticResource CircularDarkBorderlessImageButton}"
+                            Margin="5,5,5,5"
+                            Height="25" Width="40" 
+                            Content="" ToolTip="إضافة وكيل جديد"
+                            HorizontalAlignment="Left">
+                        <Button.Tag>
+                            <ImageSource>/Resources/Images/Add.png</ImageSource>
+                        </Button.Tag>
+                    </Button>
+                    <!--Reps-->
+                    <ListView ItemsSource="{Binding ShownReps}" Grid.Row="3" Grid.ColumnSpan="3"
+                              Margin="5,0,5,5" SelectedItem="{Binding SelectedRep,Mode=TwoWay}">
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="ListBoxItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                        <ListView.ItemTemplate>
+                            <DataTemplate DataType="Rep">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Button Style="{StaticResource CircularLightBorderlessImageButton}"
+                                            Width="25" Height="25" Grid.Column="0" ToolTip="حذف الوكيل">
+                                        <Button.Tag>
+                                            <ImageSource>/Resources/Images/Delete.png</ImageSource>
+                                        </Button.Tag>
+                                    </Button>
+                                    <Button Style="{StaticResource CircularLightBorderlessImageButton}"
+                                            Width="25" Height="25" Grid.Column="1" ToolTip="معلومات الوكيل"
+                                            Name="ShowBranchInfo">
+                                        <Button.Tag>
+                                            <ImageSource>/Resources/Images/Info.png</ImageSource>
+                                        </Button.Tag>
+                                    </Button>
+                                    <TextBlock FontFamily="{StaticResource TRegular}"
+                                               FontSize="14" FontWeight="Normal"
+                                               Foreground="#5D6B99"
+                                               HorizontalAlignment="Right"
+                                               Grid.Column="3"
+                                               Text="{Binding Name}"
+                                               TextAlignment="Right"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+
+                    </ListView>
+
+                </Grid>
+            </Border>
+        </Grid>
+
+        <!--Partners-->
+        <Grid Grid.Column="3" Grid.Row="0" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="الشركاء" HorizontalAlignment="Right"
+                       FontFamily="{StaticResource TBold}" FontWeight="Bold"
+                       Foreground="{StaticResource MainDarkBrush}"
+                       FontSize="16" Margin="0,10,10,0"/>
+            <Button Style="{StaticResource CircularDarkBorderlessImageButton}"
+                            Margin="10,5,5,5"
+                            Height="25" Width="40" 
+                            Content="" ToolTip="إضافة شريك جديد"
+                            HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Button.Tag>
+                    <ImageSource>/Resources/Images/Add.png</ImageSource>
+                </Button.Tag>
+            </Button>
+            <Border Grid.Row="1" Background="#5D6B99" CornerRadius="10"
+                Margin="10,5,10,10">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="3*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <!--Partners-->
+                    <ListView ItemsSource="{Binding Partners}" Grid.Row="1" Grid.ColumnSpan="3"
+                              Margin="5,5,5,5" SelectedItem="{Binding SelectedPartner,Mode=TwoWay}">
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="ListBoxItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                        <ListView.ItemTemplate>
+                            <DataTemplate DataType="Partner">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Button Style="{StaticResource CircularLightBorderlessImageButton}"
+                                            Width="25" Height="25" Grid.Column="0" ToolTip="حذف الشريك">
+                                        <Button.Tag>
+                                            <ImageSource>/Resources/Images/Delete.png</ImageSource>
+                                        </Button.Tag>
+                                    </Button>
+                                    <Button Style="{StaticResource CircularLightBorderlessImageButton}"
+                                            Width="25" Height="25" Grid.Column="1" ToolTip="معلومات الشريك">
+                                        <Button.Tag>
+                                            <ImageSource>/Resources/Images/Info.png</ImageSource>
+                                        </Button.Tag>
+                                    </Button>
+                                    <TextBlock FontFamily="{StaticResource TRegular}"
+                                               FontSize="14" FontWeight="Normal"
+                                               Foreground="#5D6B99"
+                                               HorizontalAlignment="Right"
+                                               Grid.Column="3"
+                                               Text="{Binding Name}"
+                                               TextAlignment="Right"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+
+                    </ListView>
+
+                </Grid>
+            </Border>
+        </Grid>
+
+        <!--Vaults-->
+        <Grid Grid.Column="3" Grid.Row="2" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="الصناديق المالية" HorizontalAlignment="Right"
+                       FontFamily="{StaticResource TBold}" FontWeight="Bold"
+                       Foreground="{StaticResource MainDarkBrush}"
+                       FontSize="16" Margin="0,10,10,0"/>
+            <Button Style="{StaticResource CircularDarkBorderlessImageButton}"
+                            Margin="10,5,5,5"
+                            Height="25" Width="40" 
+                            Content="" ToolTip="إضافة صندوق مالي جديد"
+                            HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Button.Tag>
+                    <ImageSource>/Resources/Images/Add.png</ImageSource>
+                </Button.Tag>
+            </Button>
+            <Border Grid.Row="1" Background="#5D6B99" CornerRadius="10"
+                Margin="10,5,10,10">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="3*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <!--Vaults-->
+                    <ListView ItemsSource="{Binding Vaults}" Grid.Row="1" Grid.ColumnSpan="3"
+                              Margin="5,5,5,5" SelectedItem="{Binding SelectedVault,Mode=TwoWay}">
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="ListBoxItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                        <ListView.ItemTemplate>
+                            <DataTemplate DataType="Vault">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Button Style="{StaticResource CircularLightBorderlessImageButton}"
+                                            Width="25" Height="25" Grid.Column="0" ToolTip="حذف الصندوق المالي">
+                                        <Button.Tag>
+                                            <ImageSource>/Resources/Images/Delete.png</ImageSource>
+                                        </Button.Tag>
+                                    </Button>
+                                    <Button Style="{StaticResource CircularLightBorderlessImageButton}"
+                                            Width="25" Height="25" Grid.Column="1" ToolTip="معلومات الصندوق المالي">
+                                        <Button.Tag>
+                                            <ImageSource>/Resources/Images/Info.png</ImageSource>
+                                        </Button.Tag>
+                                    </Button>
+                                    <TextBlock FontFamily="{StaticResource TRegular}"
+                                               FontSize="14" FontWeight="Normal"
+                                               Foreground="#5D6B99"
+                                               HorizontalAlignment="Right"
+                                               Grid.Column="3"
+                                               Text="{Binding Name}"
+                                               TextAlignment="Right"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+
+                    </ListView>
+
+                </Grid>
+            </Border>
+        </Grid>
+
+        <!--Currencies-->
+        <Grid Grid.Column="3" Grid.Row="4" Grid.RowSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="العملات" HorizontalAlignment="Right"
+                       FontFamily="{StaticResource TBold}" FontWeight="Bold"
+                       Foreground="{StaticResource MainDarkBrush}"
+                       FontSize="16" Margin="0,10,10,0"/>
+            <Button Style="{StaticResource CircularDarkBorderlessImageButton}"
+                            Margin="10,5,5,5"
+                            Height="25" Width="40" 
+                            Content="" ToolTip="إضافة عملة جديدة"
+                            HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Button.Tag>
+                    <ImageSource>/Resources/Images/Add.png</ImageSource>
+                </Button.Tag>
+            </Button>
+            <Border Grid.Row="1" Background="#5D6B99" CornerRadius="10"
+                Margin="10,5,10,10">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="3*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <!--Currencies-->
+                    <ListView ItemsSource="{Binding Currencies}" Grid.Row="1" Grid.ColumnSpan="3"
+                              Margin="5,5,5,5" SelectedItem="{Binding SelectedCurrency,Mode=TwoWay}">
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="ListBoxItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                        <ListView.ItemTemplate>
+                            <DataTemplate DataType="Currency">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Button Style="{StaticResource CircularLightBorderlessImageButton}"
+                                            Width="25" Height="25" Grid.Column="0" ToolTip="حذف العملة">
+                                        <Button.Tag>
+                                            <ImageSource>/Resources/Images/Delete.png</ImageSource>
+                                        </Button.Tag>
+                                    </Button>
+                                    <Button Style="{StaticResource CircularLightBorderlessImageButton}"
+                                            Width="25" Height="25" Grid.Column="1" ToolTip="معلومات العملة">
+                                        <Button.Tag>
+                                            <ImageSource>/Resources/Images/Info.png</ImageSource>
+                                        </Button.Tag>
+                                    </Button>
+                                    <TextBlock FontFamily="{StaticResource TRegular}"
+                                               FontSize="14" FontWeight="Normal"
+                                               Foreground="#5D6B99"
+                                               HorizontalAlignment="Right"
+                                               Grid.Column="3"
+                                               Text="{Binding Name}"
+                                               TextAlignment="Right"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+
+                    </ListView>
+
+                </Grid>
+            </Border>
+        </Grid>
+
+        <!--The Company-->
+        <Grid Grid.Column="2" Grid.Row="0" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="الشركة" HorizontalAlignment="Right"
+                       FontFamily="{StaticResource TBold}" FontWeight="Bold"
+                       Foreground="{StaticResource MainDarkBrush}"
+                       FontSize="16" Margin="0,10,10,0"/>
+            <Border Grid.Row="1" Background="#5D6B99" CornerRadius="10"
+                Margin="10,5,10,10">
+                <Border Background="{StaticResource WhiteBrush}" Margin="5,5,5,5">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <TextBlock Grid.Row="0" Grid.Column="2" Text="الاسم" HorizontalAlignment="Right"
+                            FontFamily="{StaticResource TRegular}" FontWeight="Regular"
+                            VerticalAlignment="Center"
+                            Foreground="{StaticResource MainDarkBrush}"
+                            FontSize="14" Margin="0,5,5,5"/>
+                        <TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,5,5,5"/>
+                        <TextBlock Grid.Row="1" Grid.Column="2" Text="الشعار" HorizontalAlignment="Right"
+                            FontFamily="{StaticResource TRegular}" FontWeight="Regular"
+                            VerticalAlignment="Center"
+                            Foreground="{StaticResource MainDarkBrush}"
+                            FontSize="14" Margin="0,5,5,5"/>
+                        <Image Source="/Resources/Images/TellerLogo.png" Grid.Column="0" Grid.ColumnSpan="2"
+                               Grid.Row="1" Width="64" Height="64" Margin="5,5,5,5"/>
+                        <Button Style="{StaticResource DefaultButton}" Content="تعديل"
+                                Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,0,10,5"
+                                Width="64"/>
+
+                    </Grid>
+                </Border>
+            </Border>
+        </Grid>
+
+        <!--Customers-->
+        <Grid Grid.Column="2" Grid.Row="4" Grid.RowSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="الزبائن" HorizontalAlignment="Right"
+                       FontFamily="{StaticResource TBold}" FontWeight="Bold"
+                       Foreground="{StaticResource MainDarkBrush}"
+                       FontSize="16" Margin="0,10,10,0"/>
+            <Border Grid.Row="1" Background="#5D6B99" CornerRadius="10"
+                Margin="10,5,10,10">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="3*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Column="1" Grid.ColumnSpan="2" 
+                             Margin="0,5,5,5" 
+                             Style="{StaticResource SearchTextBox}"
+                             Text="{Binding SearchCustomerText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Button Style="{StaticResource CircularDarkBorderlessImageButton}"
+                            Margin="5,5,5,5"
+                            Height="25" Width="40" 
+                            Content="" ToolTip="إضافة زبون جديد"
+                            HorizontalAlignment="Left">
+                        <Button.Tag>
+                            <ImageSource>/Resources/Images/Add.png</ImageSource>
+                        </Button.Tag>
+                    </Button>
+                    <!--Customers-->
+                    <ListView ItemsSource="{Binding ShownCustomers}" Grid.Row="1" Grid.ColumnSpan="3"
+                              Margin="5,0,5,5" SelectedItem="{Binding SelectedCustomer,Mode=TwoWay}">
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="ListBoxItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                        <ListView.ItemTemplate>
+                            <DataTemplate DataType="Customer">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Button Style="{StaticResource CircularLightBorderlessImageButton}"
+                                            Width="25" Height="25" Grid.Column="0" ToolTip="حذف الزبون">
+                                        <Button.Tag>
+                                            <ImageSource>/Resources/Images/Delete.png</ImageSource>
+                                        </Button.Tag>
+                                    </Button>
+                                    <Button Style="{StaticResource CircularLightBorderlessImageButton}"
+                                            Width="25" Height="25" Grid.Column="1" ToolTip="معلومات الزبون">
+                                        <Button.Tag>
+                                            <ImageSource>/Resources/Images/Info.png</ImageSource>
+                                        </Button.Tag>
+                                    </Button>
+                                    <TextBlock FontFamily="{StaticResource TRegular}"
+                                               FontSize="14" FontWeight="Normal"
+                                               Foreground="#5D6B99"
+                                               HorizontalAlignment="Right"
+                                               Grid.Column="3"
+                                               Text="{Binding Name}"
+                                               TextAlignment="Right"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+
+                    </ListView>
+
+                </Grid>
+            </Border>
+        </Grid>
+
+        <!--Employees-->
+        <Grid Grid.Column="2" Grid.Row="2" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="العاملون" HorizontalAlignment="Right"
+                       FontFamily="{StaticResource TBold}" FontWeight="Bold"
+                       Foreground="{StaticResource MainDarkBrush}"
+                       FontSize="16" Margin="0,10,10,0"/>
+            <Button Style="{StaticResource CircularDarkBorderlessImageButton}"
+                            Margin="10,5,5,5"
+                            Height="25" Width="40" 
+                            Content="" ToolTip="إضافة عامل جديد"
+                            HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Button.Tag>
+                    <ImageSource>/Resources/Images/Add.png</ImageSource>
+                </Button.Tag>
+            </Button>
+            <Border Grid.Row="1" Background="#5D6B99" CornerRadius="10"
+                Margin="10,5,10,10">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="3*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <!--Employees-->
+                    <ListView ItemsSource="{Binding Employees}" Grid.Row="1" Grid.ColumnSpan="3"
+                              Margin="5,5,5,5" SelectedItem="{Binding SelectedEmployee,Mode=TwoWay}">
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="ListBoxItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                        <ListView.ItemTemplate>
+                            <DataTemplate DataType="Employee">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Button Style="{StaticResource CircularLightBorderlessImageButton}"
+                                            Width="25" Height="25" Grid.Column="0" ToolTip="حذف العامل">
+                                        <Button.Tag>
+                                            <ImageSource>/Resources/Images/Delete.png</ImageSource>
+                                        </Button.Tag>
+                                    </Button>
+                                    <Button Style="{StaticResource CircularLightBorderlessImageButton}"
+                                            Width="25" Height="25" Grid.Column="1" ToolTip="معلومات العامل">
+                                        <Button.Tag>
+                                            <ImageSource>/Resources/Images/Info.png</ImageSource>
+                                        </Button.Tag>
+                                    </Button>
+                                    <TextBlock FontFamily="{StaticResource TRegular}"
+                                               FontSize="14" FontWeight="Normal"
+                                               Foreground="#5D6B99"
+                                               HorizontalAlignment="Right"
+                                               Grid.Column="3"
+                                               Text="{Binding Name}"
+                                               TextAlignment="Right"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+
+                    </ListView>
+
+                </Grid>
+            </Border>
+        </Grid>
+        
+        <!--Content-->
+        <ContentControl Grid.Row="0" Grid.RowSpan="7" Grid.Column="0" Grid.ColumnSpan="2"
+                        Content="{Binding Content, Mode=TwoWay}"
+                        Margin="10,37,10,10">
             
+        </ContentControl>
     </Grid>
 </UserControl>

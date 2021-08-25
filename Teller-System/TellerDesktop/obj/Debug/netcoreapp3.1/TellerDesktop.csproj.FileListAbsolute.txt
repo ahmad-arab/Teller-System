@@ -15,6 +15,7 @@ C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\De
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Controls\MainMenuPopup.g.cs
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Views\CompanyInfoView.g.cs
+C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Views\SubViews\AddNewBranch.g.cs
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\App.g.cs
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\TellerDesktop_MarkupCompile.cache
@@ -23,6 +24,7 @@ C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\De
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Controls\MainMenuPopup.baml
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\MainWindow.baml
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Views\CompanyInfoView.baml
+C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Views\SubViews\AddNewBranch.baml
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\TellerDesktop.g.resources
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\TellerDesktop.Properties.Resources.resources
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\TellerDesktop.csproj.GenerateResource.cache
@@ -34,4 +36,3 @@ C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\De
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\TellerDesktop.dll
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\TellerDesktop.pdb
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\TellerDesktop.genruntimeconfig.cache
-C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\TellerDesktop.csproj.AssemblyReference.cache

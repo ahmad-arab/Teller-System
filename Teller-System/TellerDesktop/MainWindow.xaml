@@ -24,7 +24,12 @@
                 <DataTemplate DataType="{x:Type local:TabItemViewModel}">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="{Binding Title}" Margin="5,3,5,3"/>
-                        <Button Style="{StaticResource TabControlButton}" Content="X"/>
+                        <Button Style="{StaticResource TabControlButton}"
+                                            Width="16" Height="16" Grid.Column="1" ToolTip="إغلاق النافذة">
+                            <Button.Tag>
+                                <ImageSource>/Resources/Images/Close.png</ImageSource>
+                            </Button.Tag>
+                        </Button>
                     </StackPanel>
                 </DataTemplate>
             </TabControl.ItemTemplate>
