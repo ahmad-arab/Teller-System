@@ -4,14 +4,6 @@ using System.Text;
 
 namespace TellerDesktop
 {
-    public enum VoucherType : byte
-    {
-        PaymentVoucher = 0,
-        JournalVoucher = 1,
-        CashVoucher = 2,
-        StartUpVoucher = 3,
-        ExpendingVoucher = 4
-    }
     public class Voucher
     {
         public int Id { get; set; }

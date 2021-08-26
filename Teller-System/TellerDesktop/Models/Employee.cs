@@ -4,15 +4,8 @@ using System.Text;
 
 namespace TellerDesktop
 {
-    public enum SalaryFrequancy
-    {
-        Monthly = 0,
-        Annual = 1,
-        Daily = 2,
-        ByService =3,
-        Ratio = 4
-    }
-    public class Employee
+    
+    public class Employee : IFinancialAccountOwner
     {
         public int Id { get; set; }
         public string Name { get; set; }

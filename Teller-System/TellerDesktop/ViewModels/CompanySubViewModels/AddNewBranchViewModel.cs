@@ -22,10 +22,10 @@ namespace TellerDesktop
             Currencies = DataProvider.GetCurrencies();
             SelectedCurrency = Currencies.FirstOrDefault();
 
-            AcceptCommand = new RelayCommand(new Action(Accept));
+            AcceptCommand = new RelayCommand(new Action<object>(Accept));
         }
 
-        public void Accept()
+        public void Accept(object param)
         {
             MessageBox.Show("الاسم : " + BranchName + "\n" + "العملة : " + SelectedCurrency.Name);
         }

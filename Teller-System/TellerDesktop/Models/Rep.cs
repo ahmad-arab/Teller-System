@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TellerDesktop
 {
-    public class Rep
+    public class Rep : IFinancialAccountOwner
     {
         private string _country;
         private string _city;

@@ -13,7 +13,13 @@
     <Compile Update="Views\CompanyInfoView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\SubViews\AddNewBranch.xaml.cs">
+    <Compile Update="Views\CompanySubViews\AddNewBranch.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\CompanySubViews\ShowBalance.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\CompanySubViews\ShowBranchInfo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -48,7 +54,13 @@
     <Page Update="Views\CompanyInfoView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\SubViews\AddNewBranch.xaml">
+    <Page Update="Views\CompanySubViews\AddNewBranch.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\CompanySubViews\ShowBalance.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\CompanySubViews\ShowBranchInfo.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

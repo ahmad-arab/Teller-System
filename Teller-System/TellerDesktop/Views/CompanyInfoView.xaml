@@ -93,7 +93,9 @@
                                     </Button>
                                     <Button Style="{StaticResource CircularLightBorderlessImageButton}"
                                             Width="25" Height="25" Grid.Column="1" ToolTip="معلومات الفرع"
-                                            Name="ShowBranchInfo">
+                                            Name="ShowBranchInfo"
+                                            Command="{Binding DataContext.ShowBranchInfoCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
+                                            CommandParameter="{Binding .}">
                                         <Button.Tag>
                                             <ImageSource>/Resources/Images/Info.png</ImageSource>
                                         </Button.Tag>

@@ -7,9 +7,10 @@ namespace TellerDesktop
     public class RelayCommand : ICommand
     {
         public event EventHandler CanExecuteChanged = (sender, e) => { };
-        private Action _action;
+        //private Action _action;
+        private Action<object> _action;
 
-        public RelayCommand(Action a)
+        public RelayCommand(Action<object> a)
         {
             _action = a;
         }
@@ -21,7 +22,7 @@ namespace TellerDesktop
 
         public void Execute(object parameter)
         {
-            _action();
+            _action(parameter);
         }
     }
 }

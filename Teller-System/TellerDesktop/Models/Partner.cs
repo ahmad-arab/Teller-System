@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TellerDesktop
 {
-    public class Partner
+    public class Partner : IFinancialAccountOwner
     {
 
         public int Id { get; set; }

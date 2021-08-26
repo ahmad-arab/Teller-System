@@ -28,6 +28,7 @@ namespace TellerDesktop
                 {
                     ShownReps = new ObservableCollection<Rep>(AllReps.Where(r => r.Branch.Name == value.Name));
                     SearchRepText = string.Empty;
+                    OnShowBalance(value);
                 }
             }
         }
@@ -51,7 +52,19 @@ namespace TellerDesktop
         #region Reps
         public ObservableCollection<Rep> AllReps { get; set; }
         public ObservableCollection<Rep> ShownReps { get; set; }
-        public Rep SelectedRep { get; set; }
+
+        private Rep _selectedRep;
+        public Rep SelectedRep
+        {
+            get { return _selectedRep; }
+            set 
+            { 
+                _selectedRep = value;
+                if(value != null)
+                    OnShowBalance(value);
+            }
+        }
+
 
         private string _serchRepText;
         public string SearchRepText
@@ -70,12 +83,34 @@ namespace TellerDesktop
 
         #region Partners
         public ObservableCollection<Partner> Partners { get; set; }
-        public Partner SelectedPartner { get; set; }
+
+        private Partner _selectedPartner;
+        public Partner SelectedPartner
+        {
+            get { return _selectedPartner; }
+            set 
+            { 
+                _selectedPartner = value;
+                if (value != null) OnShowBalance(value);
+            }
+        }
+
         #endregion
 
         #region Vaults
         public ObservableCollection<Vault> Vaults { get; set; }
-        public Vault SelectedVault { get; set; }
+
+        private Vault _selectedVault;
+        public Vault SelectedVault
+        {
+            get { return _selectedVault; }
+            set 
+            {
+                _selectedVault = value;
+                if (value != null) OnShowBalance(value);
+            }
+        }
+
         #endregion
 
         #region Currencies
@@ -86,7 +121,18 @@ namespace TellerDesktop
         #region Customers
         public ObservableCollection<Customer> AllCustomers { get; set; }
         public ObservableCollection<Customer> ShownCustomers { get; set; }
-        public Customer SelectedCustomer { get; set; }
+
+        private Customer _selectedCustomer;
+        public Customer SelectedCustomer
+        {
+            get { return _selectedCustomer; }
+            set 
+            {
+                _selectedCustomer = value;
+                if (value != null) OnShowBalance(value);
+            }
+        }
+
 
         private string _serchCustomerText;
         public string SearchCustomerText
@@ -105,7 +151,18 @@ namespace TellerDesktop
 
         #region Employees
         public ObservableCollection<Employee> Employees { get; set; }
-        public Employee SelectedEmployee { get; set; }
+
+        private Employee _selectedEmployee;
+        public Employee SelectedEmployee
+        {
+            get { return _selectedEmployee; }
+            set 
+            { 
+                _selectedEmployee = value;
+                if (value != null) OnShowBalance(value);
+            }
+        }
+
         #endregion
 
         #region Content
@@ -113,7 +170,9 @@ namespace TellerDesktop
         #endregion
 
         #region Commands
-        public ICommand AddNewBrnachCommand { get; set; }
+        public ICommand AddNewBrnachCommand { get; }
+        public ICommand ShowBranchInfoCommand { get;}
+        public ICommand ShowBalanceCommand { get; set; }
         #endregion
 
         #region Constructor
@@ -127,14 +186,29 @@ namespace TellerDesktop
             ShownCustomers = AllCustomers = DataProvider.GetCustomers();
             Employees = DataProvider.GetEmployees();
 
-            AddNewBrnachCommand = new RelayCommand(new Action(OnAddNewBranchCLicked));
+            AddNewBrnachCommand = new RelayCommand(new Action<object>(OnAddNewBranchCLicked));
+            ShowBranchInfoCommand = new RelayCommand(new Action<object>(OnShowBranchInfoCLicked));
+            ShowBalanceCommand = new RelayCommand(new Action<object>(OnShowBalance));
         }
         #endregion
 
         #region Methods
-        public void OnAddNewBranchCLicked()
+        public void OnAddNewBranchCLicked(object param)
         {
             Content = new AddNewBranch();
+        }
+        public void OnShowBranchInfoCLicked(object param)
+        {
+            var c = new ShowBranchInfo();
+            c.DataContext = new ShowBranchInfoViewModel((Branch)param);
+            Content = c;
+        }
+        public void OnShowBalance(object param)
+        {
+            var c = new ShowBalance();
+            IFinancialAccountOwner fa = (IFinancialAccountOwner)param;
+            c.DataContext = new ShowBalanceViewModel(fa.FinancialAccount);
+            Content = c;
         }
         #endregion
     }
