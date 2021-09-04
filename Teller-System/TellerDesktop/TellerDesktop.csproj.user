@@ -7,7 +7,7 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Controls\MainMenuPopup.xaml.cs">
+    <Compile Update="Views\MainWindowSubViews\MainMenuPopup.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\CompanyInfoView.xaml.cs">
@@ -22,9 +22,12 @@
     <Compile Update="Views\CompanySubViews\ShowBranchInfo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Vouchers\StartupVoucher.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Controls\MainMenuPopup.xaml">
+    <Page Update="Views\MainWindowSubViews\MainMenuPopup.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
@@ -61,6 +64,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\CompanySubViews\ShowBranchInfo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Vouchers\StartupVoucher.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

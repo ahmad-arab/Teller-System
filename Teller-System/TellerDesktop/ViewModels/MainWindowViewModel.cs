@@ -11,30 +11,29 @@ namespace TellerDesktop
     public class MainWindowViewModel:BaseViewModel
     {
         public ObservableCollection<TabItemViewModel> Tabs { get; set; }
+        public MainMenuPopuoViewModel MainMenuDataContext { get; set; }
         public ICommand MainMenuButtonClickedCommand;
-
-        private string _MainMenuClickedButton;
-
-        public string MainMenuClickedButton
-        {
-            get { return _MainMenuClickedButton; }
-            set 
-            {
-                _MainMenuClickedButton = value;
-                MainMenuButtonClicked(value);
-            }
-        }
-
 
         public MainWindowViewModel()
         {
             Tabs = new ObservableCollection<TabItemViewModel>();
-            //MainMenuButtonClickedCommand = new RelayCommand();
+            MainMenuDataContext = new MainMenuPopuoViewModel();
+            MainMenuDataContext.OnMainMenuButtonClicked+= MainMenuButtonClicked;
+
+
         }
 
-        private void MainMenuButtonClicked(string name)
+        private void MainMenuButtonClicked(object sender, MainMenuButtonClickedEventArgs e)
         {
-            Tabs.Add(new TabItemViewModel(name,new CompanyInfoView()));
+            switch(e.Name)
+            {
+                case "Company":
+                    Tabs.Add(new TabItemViewModel("الشركة", new CompanyInfoView()));
+                    break;
+                case "StartupVoucher":
+                    Tabs.Add(new TabItemViewModel("سند افتتاحي", new StartupVoucher()));
+                    break;
+            }
         }
     }
 }

@@ -12,7 +12,6 @@ C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\De
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Resources\Styles\Fonts.baml
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Resources\Styles\Tabs.baml
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Resources\Styles\TextBoxes.baml
-C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Controls\MainMenuPopup.g.cs
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Views\CompanyInfoView.g.cs
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\App.g.cs
@@ -20,7 +19,6 @@ C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\De
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\TellerDesktop_MarkupCompile.cache
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\TellerDesktop_MarkupCompile.lref
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\App.baml
-C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Controls\MainMenuPopup.baml
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\MainWindow.baml
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Views\CompanyInfoView.baml
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\TellerDesktop.g.resources
@@ -41,3 +39,7 @@ C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\De
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Views\CompanySubViews\AddNewBranch.baml
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Views\CompanySubViews\ShowBalance.baml
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Views\CompanySubViews\ShowBranchInfo.baml
+C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Views\MainWindowSubViews\MainMenuPopup.g.cs
+C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Views\MainWindowSubViews\MainMenuPopup.baml
+C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Views\Vouchers\StartupVoucher.g.cs
+C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Views\Vouchers\StartupVoucher.baml

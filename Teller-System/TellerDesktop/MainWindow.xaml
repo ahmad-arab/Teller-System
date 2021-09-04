@@ -41,7 +41,7 @@
         </TabControl>
         <Custom:MainMenuPopup x:Name="mmp" Panel.ZIndex="1" 
                               Grid.Column="1" Margin="0,5,10,0"
-                              ClickedButton="{Binding MainMenuClickedButton, Mode=TwoWay}">
+                              DataContext="{Binding MainMenuDataContext, Mode=TwoWay}">
         </Custom:MainMenuPopup>
     </Grid>
 </Window>
