@@ -16,9 +16,9 @@ namespace TellerDesktop
     /// <summary>
     /// Interaction logic for StartupVoucher.xaml
     /// </summary>
-    public partial class StartupVoucher : UserControl
+    public partial class StartupVoucherView : UserControl
     {
-        public StartupVoucher()
+        public StartupVoucherView()
         {
             InitializeComponent();
         }

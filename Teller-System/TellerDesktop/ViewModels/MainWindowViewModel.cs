@@ -31,7 +31,21 @@ namespace TellerDesktop
                     Tabs.Add(new TabItemViewModel("الشركة", new CompanyInfoView()));
                     break;
                 case "StartupVoucher":
-                    Tabs.Add(new TabItemViewModel("سند افتتاحي", new StartupVoucher()));
+                    Tabs.Add(new TabItemViewModel("سند افتتاحي", new StartupVoucherView()));
+                    break;
+                case "JournalVoucher":
+                    JournalVoucherView jvv = new JournalVoucherView();
+                    jvv.DataContext = new JournalVoucherViewModel();
+                    Tabs.Add(new TabItemViewModel("سند قيد",jvv));
+                    break;
+                case "PaymentVoucher":
+                    Tabs.Add(new TabItemViewModel("سند دفع", new PaymentVoucherView()));
+                    break;
+                case "CashVoucher":
+                    Tabs.Add(new TabItemViewModel("سند قبض", new CashVoucherView()));
+                    break;
+                case "ExpendingVoucher":
+                    Tabs.Add(new TabItemViewModel("أمر صرف", new ExpendingVoucherView()));
                     break;
             }
         }

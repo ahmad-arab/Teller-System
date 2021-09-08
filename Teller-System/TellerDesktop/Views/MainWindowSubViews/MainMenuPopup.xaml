@@ -178,15 +178,15 @@
                 <Button Grid.Column="1" Grid.Row="1" Margin="7,7,3,0"
                     Style="{StaticResource MainMenuSubButton}" 
                     Content="سند قيد" HorizontalAlignment="Stretch"
-                    Command="{Binding CompanyCommand}">
+                    Command="{Binding JournalVoucherCommand}">
                     <Button.Tag>
-                        <ImageSource>../../Resources/Images/StartupVoucher.png</ImageSource>
+                        <ImageSource>../../Resources/Images/JournalVoucher.png</ImageSource>
                     </Button.Tag>
                 </Button>
                 <Button Grid.Column="1" Grid.Row="2" Margin="7,7,3,0"
                     Style="{StaticResource MainMenuSubButton}" 
                     Content="سند دفع" HorizontalAlignment="Stretch"
-                    Command="{Binding CompanyCommand}">
+                    Command="{Binding PaymentVoucherCommand}">
                     <Button.Tag>
                         <ImageSource>../../Resources/Images/PaymentVoucher.png</ImageSource>
                     </Button.Tag>
@@ -194,7 +194,7 @@
                 <Button Grid.Column="1" Grid.Row="3" Margin="7,7,3,0"
                     Style="{StaticResource MainMenuSubButton}" 
                     Content="سند قبض" HorizontalAlignment="Stretch"
-                    Command="{Binding CompanyCommand}">
+                    Command="{Binding CashVoucherCommand}">
                     <Button.Tag>
                         <ImageSource>../../Resources/Images/CashVoucher.png</ImageSource>
                     </Button.Tag>
@@ -202,7 +202,7 @@
                 <Button Grid.Column="1" Grid.Row="4" Margin="7,7,3,0"
                     Style="{StaticResource MainMenuSubButton}" 
                     Content="أمر صرف" HorizontalAlignment="Stretch"
-                    Command="{Binding CompanyCommand}">
+                    Command="{Binding ExpendingVoucherCommand}">
                     <Button.Tag>
                         <ImageSource>../../Resources/Images/ExpendingVoucher.png</ImageSource>
                     </Button.Tag>

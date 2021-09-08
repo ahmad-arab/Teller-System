@@ -34,6 +34,9 @@ namespace TellerDesktop
                                    new Rep {Id =7, Branch= new Branch{ Id=6, Name="لبنان" }, Name="ميشيل عفلق", OfficeName="الناظم للحوالات", City="بيروت", Country="لبنان", Email="...",
                                                         Phone1="...",Phone2="...", RestOfTheAddress="...", WorkingHours="من فلان إلى فلان" , FinancialAccount = FinancialAccount.GetRandomAccount(24)},};
         }
+
+        #region Currencies
+        public static ObservableCollection<Currency> Currencies = new ObservableCollection<Currency>();
         public static ObservableCollection<Currency> GetCurrencies()
         {
             return new ObservableCollection<Currency> { new Currency { Name = "ليرة سورية" },
@@ -45,6 +48,49 @@ namespace TellerDesktop
                                         new Currency { Name = "دولار كندي" },
                                         new Currency { Name = "ليرة لبناني" },};
         }
+        public static void UpdateCurrencies()
+        {
+            Currencies = new ObservableCollection<Currency> { new Currency { Name = "ليرة سورية" },
+                                        new Currency { Name = "دولار" },
+                                        new Currency { Name = "يورو" },
+                                        new Currency { Name = "كرون" },
+                                        new Currency { Name = "بيزو" },
+                                        new Currency { Name = "روبل" },
+                                        new Currency { Name = "دولار كندي" },
+                                        new Currency { Name = "ليرة لبناني" },};
+        }
+        #endregion
+
+        #region StartupVoucher
+        public static Voucher TheStartupVoucher = new Voucher();
+        public static Voucher GetStartupVoucher()
+        {
+            return TheStartupVoucher;
+        }
+        #endregion
+
+        #region JournalVouchers
+        public static ObservableCollection<Voucher> JournalVouchers = new ObservableCollection<Voucher>();
+        public static ObservableCollection<Voucher> GetJournalVouchers()
+        {
+            ObservableCollection<FinancialAction> actions = new ObservableCollection<FinancialAction>
+            {
+                new FinancialAction(1,1,FinancialAccount.GetRandomAccount(19),VoucherType.JournalVoucher,100,0,Currency.GetRandomCurrencies()[1],Currency.GetRandomCurrencies()[1].SellPrice,"لا شيء",100*Currency.GetRandomCurrencies()[1].SellPrice,new DateTime(2021,6,5)),
+                new FinancialAction(2,1,FinancialAccount.GetRandomAccount(30),VoucherType.JournalVoucher,0,400000,Currency.GetRandomCurrencies()[0],Currency.GetRandomCurrencies()[0].SellPrice,"لا شيء",(-1)*100*Currency.GetRandomCurrencies()[0].SellPrice,new DateTime(2021,6,5)),
+                new FinancialAction(1,2,FinancialAccount.GetRandomAccount(480),VoucherType.JournalVoucher,200,0,Currency.GetRandomCurrencies()[2],Currency.GetRandomCurrencies()[2].SellPrice,"لا شيء",200*Currency.GetRandomCurrencies()[2].SellPrice,new DateTime(2021,6,10)),
+                new FinancialAction(2,2,FinancialAccount.GetRandomAccount(92),VoucherType.JournalVoucher,5000,0,Currency.GetRandomCurrencies()[3],Currency.GetRandomCurrencies()[3].SellPrice,"لا شيء",5000*Currency.GetRandomCurrencies()[3].SellPrice,new DateTime(2021,6,10)),
+                new FinancialAction(3,2,FinancialAccount.GetRandomAccount(934),VoucherType.JournalVoucher,0,670,Currency.GetRandomCurrencies()[4],Currency.GetRandomCurrencies()[4].SellPrice,"لا شيء",(-1)*670*Currency.GetRandomCurrencies()[4].SellPrice,new DateTime(2021,6,10)),
+                new FinancialAction(1,3,FinancialAccount.GetRandomAccount(983),VoucherType.JournalVoucher,0,50,Currency.GetRandomCurrencies()[1],Currency.GetRandomCurrencies()[1].SellPrice,"لا شيء",(-1)*50*Currency.GetRandomCurrencies()[1].SellPrice,new DateTime(2021,6,15)),
+            };
+            return new ObservableCollection<Voucher>
+            {
+                new Voucher(1,new DateTime(2021,6,5),Currency.GetRandomCurrencies()[0],Currency.GetRandomCurrencies()[0].SellPrice,null,0,"لماذا وضع الله الميزان", "عبد المنعم",VoucherType.JournalVoucher,new ObservableCollection<FinancialAction>(){actions[0],actions[1] }),
+                new Voucher(2,new DateTime(2021,6,10),Currency.GetRandomCurrencies()[0],Currency.GetRandomCurrencies()[0].SellPrice,null,0,"السند الثاني بفضل الله", "عبد العظيم",VoucherType.JournalVoucher,new ObservableCollection<FinancialAction>(){actions[2],actions[3],actions[4] }),
+                new Voucher(3,new DateTime(2021,6,15),Currency.GetRandomCurrencies()[0],Currency.GetRandomCurrencies()[0].SellPrice,null,0,"كيف أنساك!!!", "عبد المنعم",VoucherType.JournalVoucher,new ObservableCollection<FinancialAction>(){actions[5]})
+            };
+        }
+        #endregion
+
         public static ObservableCollection<Partner> GetPartners()
         {
             return new ObservableCollection<Partner> { new Partner(){ Email="ahmad@ahmad.com", FinancialAccount = FinancialAccount.GetRandomAccount(37), Id=1, Name = "عبد الباقي", Phone1="0912345667", Phone2 = "05983567"},

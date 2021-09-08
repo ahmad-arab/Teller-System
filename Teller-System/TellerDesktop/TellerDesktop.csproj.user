@@ -22,7 +22,19 @@
     <Compile Update="Views\CompanySubViews\ShowBranchInfo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Vouchers\StartupVoucher.xaml.cs">
+    <Compile Update="Views\Vouchers\CashVoucherView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Vouchers\ExpendingVoucherView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Vouchers\JournalVoucherView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Vouchers\PaymentVoucherView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Vouchers\StartupVoucherView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -30,7 +42,7 @@
     <Page Update="Views\MainWindowSubViews\MainMenuPopup.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MainWindow.xaml">
+    <Page Update="Views\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Styles\Buttons.xaml">
@@ -66,7 +78,19 @@
     <Page Update="Views\CompanySubViews\ShowBranchInfo.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Vouchers\StartupVoucher.xaml">
+    <Page Update="Views\Vouchers\CashVoucherView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Vouchers\ExpendingVoucherView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Vouchers\JournalVoucherView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Vouchers\PaymentVoucherView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Vouchers\StartupVoucherView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

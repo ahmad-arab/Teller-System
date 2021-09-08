@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\App.xaml
-14-2049841587
+18-1672553568
 
-36-963931040
+471583317024
 1941028232726
-MainWindow.xaml;Resources\Styles\Buttons.xaml;Resources\Styles\Colors.xaml;Resources\Styles\ComboBoxes.xaml;Resources\Styles\DatePickers.xaml;Resources\Styles\Fonts.xaml;Resources\Styles\Tabs.xaml;Resources\Styles\TextBoxes.xaml;Views\CompanyInfoView.xaml;Views\CompanySubViews\AddNewBranch.xaml;Views\CompanySubViews\ShowBalance.xaml;Views\CompanySubViews\ShowBranchInfo.xaml;Views\MainWindowSubViews\MainMenuPopup.xaml;Views\Vouchers\StartupVoucher.xaml;
+Resources\Styles\Buttons.xaml;Resources\Styles\Colors.xaml;Resources\Styles\ComboBoxes.xaml;Resources\Styles\DatePickers.xaml;Resources\Styles\Fonts.xaml;Resources\Styles\Tabs.xaml;Resources\Styles\TextBoxes.xaml;Views\CompanyInfoView.xaml;Views\CompanySubViews\AddNewBranch.xaml;Views\CompanySubViews\ShowBalance.xaml;Views\CompanySubViews\ShowBranchInfo.xaml;Views\MainWindow.xaml;Views\MainWindowSubViews\MainMenuPopup.xaml;Views\Vouchers\CashVoucherView.xaml;Views\Vouchers\ExpendingVoucherView.xaml;Views\Vouchers\JournalVoucherView.xaml;Views\Vouchers\PaymentVoucherView.xaml;Views\Vouchers\StartupVoucherView.xaml;
 
 False
 

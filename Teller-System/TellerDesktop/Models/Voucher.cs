@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace TellerDesktop
@@ -15,7 +16,7 @@ namespace TellerDesktop
         public string Note { get; set; }
         public string Editor { get; set; }
         public VoucherType Type { get; set; }
-        public List<FinancialAction> Actions { get; set; }
+        public ObservableCollection<FinancialAction> Actions { get; set; }
 
         public Voucher()
         {
@@ -28,11 +29,11 @@ namespace TellerDesktop
             this.Type = VoucherType.JournalVoucher;
             Note = "";
             Editor = "";
-            Actions = new List<FinancialAction>();
+            Actions = new ObservableCollection<FinancialAction>();
         }
         public Voucher(int id, DateTime date, Currency currency, decimal exchangeRate,
                               FinancialAccount account, int securityLevel, string note, string editor, VoucherType type,
-                              List<FinancialAction> actions)
+                              ObservableCollection<FinancialAction> actions)
         {
             Id = id;
             Date = date;
