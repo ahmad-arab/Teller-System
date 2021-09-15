@@ -37,18 +37,24 @@ namespace TellerDesktop
         {
             Currencies = DataProvider.GetCurrencies();
             AllVouchers = DataProvider.GetJournalVouchers();
-            CurrentVoucherIndex = AllVouchers.Count - 1;
-            CurrentVoucherOriginal = AllVouchers[AllVouchers.Count - 1];
-            CurrentVoucherCurrent = AllVouchers[AllVouchers.Count - 1];
 
-            VoucherNumber = CurrentVoucherOriginal.Id.ToString();
-            VoucherDate = CurrentVoucherOriginal.Date;
-            SelectedCurrency = Currencies.FirstOrDefault(x => x.EqualsByName(CurrentVoucherOriginal.Currency));
-            Editor = CurrentVoucherOriginal.Editor;
-            Note = CurrentVoucherOriginal.Note;
-            ExchangeRate = CurrentVoucherOriginal.ExchangeRate.ToString();
+            if (AllVouchers.Count > 0)
+            {
+                CurrentVoucherIndex = AllVouchers.Count - 1;
+                CurrentVoucherOriginal = AllVouchers[AllVouchers.Count - 1];
+                CurrentVoucherCurrent = AllVouchers[AllVouchers.Count - 1];
 
-            Actions = CurrentVoucherOriginal.Actions;
+                VoucherNumber = CurrentVoucherOriginal.Id.ToString();
+                VoucherDate = CurrentVoucherOriginal.Date;
+                SelectedCurrency = Currencies.FirstOrDefault(x => x.EqualsByName(CurrentVoucherOriginal.Currency));
+                Editor = CurrentVoucherOriginal.Editor;
+                Note = CurrentVoucherOriginal.Note;
+                ExchangeRate = CurrentVoucherOriginal.ExchangeRate.ToString();
+
+                Actions = CurrentVoucherOriginal.Actions;
+
+                Index = (CurrentVoucherIndex + 1).ToString() + " / " + AllVouchers.Count.ToString();
+            }
 
             GoRightCommand = new RelayCommand(OnGoRight);
             GoLeftCommand = new RelayCommand(OnGoLeft);
@@ -58,29 +64,45 @@ namespace TellerDesktop
         #region Methods
         public void OnGoRight(object param)
         {
-            CurrentVoucherIndex--;
-            if (CurrentVoucherIndex < 0) CurrentVoucherIndex = AllVouchers.Count - 1;
+            if (AllVouchers.Count > 0)
+            {
+                CurrentVoucherIndex--;
+                if (CurrentVoucherIndex < 0) CurrentVoucherIndex = AllVouchers.Count - 1;
 
-            VoucherNumber = AllVouchers[CurrentVoucherIndex].Id.ToString();
-            VoucherDate = AllVouchers[CurrentVoucherIndex].Date;
-            SelectedCurrency = Currencies.FirstOrDefault(x => x.EqualsByName(AllVouchers[CurrentVoucherIndex].Currency));
-            Editor = AllVouchers[CurrentVoucherIndex].Editor;
-            Note = AllVouchers[CurrentVoucherIndex].Note;
-            ExchangeRate = AllVouchers[CurrentVoucherIndex].ExchangeRate.ToString();
-            Actions = AllVouchers[CurrentVoucherIndex].Actions;
+                VoucherNumber = AllVouchers[CurrentVoucherIndex].Id.ToString();
+                VoucherDate = AllVouchers[CurrentVoucherIndex].Date;
+                SelectedCurrency = Currencies.FirstOrDefault(x => x.EqualsByName(AllVouchers[CurrentVoucherIndex].Currency));
+                Editor = AllVouchers[CurrentVoucherIndex].Editor;
+                Note = AllVouchers[CurrentVoucherIndex].Note;
+                ExchangeRate = AllVouchers[CurrentVoucherIndex].ExchangeRate.ToString();
+                Actions = AllVouchers[CurrentVoucherIndex].Actions;
+
+                CurrentVoucherOriginal = AllVouchers[CurrentVoucherIndex];
+                CurrentVoucherCurrent = AllVouchers[CurrentVoucherIndex];
+
+                Index = (CurrentVoucherIndex + 1).ToString() + " / " + AllVouchers.Count.ToString();
+            }
         }
         public void OnGoLeft(object param)
         {
-            CurrentVoucherIndex++;
-            if (CurrentVoucherIndex >= AllVouchers.Count) CurrentVoucherIndex = 0;
+            if (AllVouchers.Count > 0)
+            {
+                CurrentVoucherIndex++;
+                if (CurrentVoucherIndex >= AllVouchers.Count) CurrentVoucherIndex = 0;
 
-            VoucherNumber = AllVouchers[CurrentVoucherIndex].Id.ToString();
-            VoucherDate = AllVouchers[CurrentVoucherIndex].Date;
-            SelectedCurrency = Currencies.FirstOrDefault(x => x.EqualsByName(AllVouchers[CurrentVoucherIndex].Currency));
-            Editor = AllVouchers[CurrentVoucherIndex].Editor;
-            Note = AllVouchers[CurrentVoucherIndex].Note;
-            ExchangeRate = AllVouchers[CurrentVoucherIndex].ExchangeRate.ToString();
-            Actions = AllVouchers[CurrentVoucherIndex].Actions;
+                VoucherNumber = AllVouchers[CurrentVoucherIndex].Id.ToString();
+                VoucherDate = AllVouchers[CurrentVoucherIndex].Date;
+                SelectedCurrency = Currencies.FirstOrDefault(x => x.EqualsByName(AllVouchers[CurrentVoucherIndex].Currency));
+                Editor = AllVouchers[CurrentVoucherIndex].Editor;
+                Note = AllVouchers[CurrentVoucherIndex].Note;
+                ExchangeRate = AllVouchers[CurrentVoucherIndex].ExchangeRate.ToString();
+                Actions = AllVouchers[CurrentVoucherIndex].Actions;
+
+                CurrentVoucherOriginal = AllVouchers[CurrentVoucherIndex];
+                CurrentVoucherCurrent = AllVouchers[CurrentVoucherIndex];
+
+                Index = (CurrentVoucherIndex + 1).ToString() + " / " + AllVouchers.Count.ToString();
+            }
         }
         #endregion
     }

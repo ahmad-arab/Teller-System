@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TellerDesktop
 {
-    public class Voucher
+    public class Voucher:BaseModel
     {
         public int Id { get; set; }
         public DateTime Date { get; set; }

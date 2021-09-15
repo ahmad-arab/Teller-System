@@ -27,7 +27,8 @@
                         </Button>
                         <TextBox Grid.Column="0" Grid.Row="0"
                              Width="100" Margin="0,0,0,0" Height="25" FontSize="12"
-                                 TextAlignment="Center"/>
+                                 TextAlignment="Center"
+                                 Text="{Binding Index}"/>
                         <Button Style="{StaticResource CircularDarkBorderlessImageButton}" 
                         Height="25" Width="25"
                          Margin="0,0,10,0" Command="{Binding GoLeftCommand}">
@@ -135,8 +136,9 @@
                      Grid.ColumnSpan="5" Margin="5,5,5,5" Text="{Binding Editor}"/>
             <ComboBox Margin="5,5,5,5" Grid.Row="2"
                               Grid.Column="7" Grid.ColumnSpan="2"
-                              IsEditable="False" ItemsSource="{Binding Currencies}"
-                      DisplayMemberPath="{Binding Name}" SelectedItem="{Binding SelectedCurrency}"/>
+                              IsEditable="False" ItemsSource="{Binding Path=Currencies}"
+                         DisplayMemberPath="Name"
+                         SelectedItem="{Binding Path=SelectedCurrency, Mode=TwoWay}"  />
             <TextBlock FontFamily="{StaticResource TRegular}" FontWeight="Regular"
                        FontSize="14" Foreground="{StaticResource MainDarkBrush}"
                        VerticalAlignment="Center" 
@@ -155,7 +157,8 @@
                           FontFamily="/Resources/Fonts/#Tajawal"
                           FontWeight="Bold"
                           Foreground="{StaticResource MainDarkBrush}"
-                              ItemsSource="{Binding Actions}">
+                              ItemsSource="{Binding Actions}"
+                              AutoGenerateColumns="False">
 
                         <DataGrid.Columns>
                             <DataGridTextColumn Width="*" Header="الرقم" Binding="{Binding Id}"/>
@@ -163,7 +166,13 @@
                             <DataGridTextColumn Width="*" Header="مدين" Binding="{Binding DebtorValue}"/>
                             <DataGridTextColumn Width="*" Header="دائن" Binding="{Binding CreditorValue}"/>
                             <DataGridTextColumn Width="*" Header="البيان" Binding="{Binding Note}"/>
-                            <DataGridComboBoxColumn Width="*" Header="العملة" ItemsSource="{Binding Currencies, RelativeSource={RelativeSource AncestorType=UserControl}}" SelectedItemBinding="{Binding Currency.Name}"/>
+
+                            <local:DataGridComboBoxColumnWithBindingHack Width="*" Header="العملة"
+                                SelectedValueBinding="{Binding Currency}"
+                                SelectedValuePath=" ."
+                                DisplayMemberPath="Name"                                         
+                                ItemsSource="{Binding RelativeSource={RelativeSource AncestorType=local:JournalVoucherView}, Path=DataContext.Currencies}" />
+
                             <DataGridTextColumn Width="*" Header="سعر الصرف" Binding="{Binding ExchangeRate}"/>
                             <DataGridTextColumn Width="*" Header="القيمة" Binding="{Binding Value}"/>
                         </DataGrid.Columns>

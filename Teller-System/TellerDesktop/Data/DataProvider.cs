@@ -39,14 +39,11 @@ namespace TellerDesktop
         public static ObservableCollection<Currency> Currencies = new ObservableCollection<Currency>();
         public static ObservableCollection<Currency> GetCurrencies()
         {
-            return new ObservableCollection<Currency> { new Currency { Name = "ليرة سورية" },
-                                        new Currency { Name = "دولار" },
-                                        new Currency { Name = "يورو" },
-                                        new Currency { Name = "كرون" },
-                                        new Currency { Name = "بيزو" },
-                                        new Currency { Name = "روبل" },
-                                        new Currency { Name = "دولار كندي" },
-                                        new Currency { Name = "ليرة لبناني" },};
+            return new ObservableCollection<Currency> { Currency.GetRandomCurrencies()[0],
+                                        Currency.GetRandomCurrencies()[1],
+                                        Currency.GetRandomCurrencies()[2],
+                                        Currency.GetRandomCurrencies()[3],
+                                        Currency.GetRandomCurrencies()[4]};
         }
         public static void UpdateCurrencies()
         {

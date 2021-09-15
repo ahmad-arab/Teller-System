@@ -17,7 +17,8 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button Command="{Binding MainMenuCommand}" Grid.Column="5" Style="{StaticResource MainMenuButton}" 
-                        Height="25" Width="25" HorizontalAlignment="Stretch">
+                        Height="25" Width="25" HorizontalAlignment="Right"
+                    Margin="0,5,10,0">
                 <Button.Tag>
                     <ImageSource>../../Resources/Images/Dots.png</ImageSource>
                 </Button.Tag>

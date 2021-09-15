@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace TellerDesktop
 {
     
-    public class FinancialAction
+    public class FinancialAction : BaseModel
     {
         public int Id { get; set; }
         public int VoucherId { get; set; }

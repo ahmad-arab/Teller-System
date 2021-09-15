@@ -5,7 +5,7 @@ using System.Text;
 namespace TellerDesktop
 {
     
-    public class Employee : IFinancialAccountOwner
+    public class Employee : BaseModel, IFinancialAccountOwner
     {
         public int Id { get; set; }
         public string Name { get; set; }

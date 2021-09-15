@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TellerDesktop
 {
-    public class Branch : IFinancialAccountOwner
+    public class Branch : BaseModel, IFinancialAccountOwner
     {
         public int Id { get; set; }
         public string Name { get; set; }

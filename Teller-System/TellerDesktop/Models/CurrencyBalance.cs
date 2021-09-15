@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TellerDesktop
 {
-    public class CurrencyBalance
+    public class CurrencyBalance : BaseModel
     {
         public Currency Currency { get; set; }
         public decimal DebtorValue { get; set; }

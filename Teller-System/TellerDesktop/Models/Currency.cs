@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TellerDesktop
 {
-    public class Currency
+    public class Currency : BaseModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -51,6 +51,20 @@ namespace TellerDesktop
                                         new Currency { Id=3, Name="يورو", BuyPrice=3700, SellPrice=3720},
                                         new Currency { Id=4, Name="كرون", BuyPrice=560, SellPrice=600},
                                         new Currency { Id=5, Name="جنيه", BuyPrice=4000, SellPrice=4050}};
+        }
+
+        public override bool Equals(Object obj)
+        {
+            Currency c = obj as Currency;
+            //Check for null and compare run-time types.
+            if ((obj == null) || !this.GetType().Equals(obj.GetType()))
+            {
+                return false;
+            }
+            else
+            {
+                return (this.Name == c.Name);
+            }
         }
     }
 }

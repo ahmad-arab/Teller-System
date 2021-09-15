@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TellerDesktop
 {
-    public class User
+    public class User : BaseModel
     {
         public string Name { get; set; }
         public string UserName { get; set; }
