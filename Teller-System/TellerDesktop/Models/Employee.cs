@@ -18,6 +18,7 @@ namespace TellerDesktop
         public Currency Currency { get; set; }
         public decimal Salary { get; set; }
         public FinancialAccount FinancialAccount { get; set; }
+        public string TypeName { get; set; } = "العاملون";
 
         public Employee()
         {

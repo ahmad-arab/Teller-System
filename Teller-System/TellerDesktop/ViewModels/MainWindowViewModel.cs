@@ -47,6 +47,11 @@ namespace TellerDesktop
                 case "ExpendingVoucher":
                     Tabs.Add(new TabItemViewModel("أمر صرف", new ExpendingVoucherView()));
                     break;
+                case "Accounts":
+                    FinancialAccountsView fav = new FinancialAccountsView();
+                    fav.DataContext = new FinancialAccountsViewModel();
+                    Tabs.Add(new TabItemViewModel("الحسابات المالية", fav));
+                    break;
             }
         }
     }

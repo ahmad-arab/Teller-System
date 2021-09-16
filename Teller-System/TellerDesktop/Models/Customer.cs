@@ -13,6 +13,7 @@ namespace TellerDesktop
         public string Phone1 { get; set; }
         public string Phone2 { get; set; }
         public FinancialAccount FinancialAccount { get; set; }
+        public string TypeName { get; set; } = "الزبائن";
 
         public Customer()
         {

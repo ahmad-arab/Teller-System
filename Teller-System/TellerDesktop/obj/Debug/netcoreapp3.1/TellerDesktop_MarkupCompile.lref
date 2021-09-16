@@ -1,9 +1,11 @@
-﻿C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+﻿
 FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\App.xaml;;
 FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\Views\CompanyInfoView.xaml;;
 FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\Views\CompanySubViews\AddNewBranch.xaml;;
 FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\Views\CompanySubViews\ShowBalance.xaml;;
 FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\Views\CompanySubViews\ShowBranchInfo.xaml;;
+FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\Views\FinancialAccountsSubViews\ShowAccountBalanceView.xaml;;
+FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\Views\FinancialAccountsView.xaml;;
 FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\Views\MainWindow.xaml;;
 FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\Views\MainWindowSubViews\MainMenuPopup.xaml;;
 FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\Views\Vouchers\CashVoucherView.xaml;;

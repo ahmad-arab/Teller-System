@@ -49,6 +49,7 @@ namespace TellerDesktop
         public string Phone2 { get; set; }
         public string WorkingHours { get; set; }
         public FinancialAccount FinancialAccount { get; set; }
+        public string TypeName { get; set; } = "المندوبين";
 
         public Rep()
         {

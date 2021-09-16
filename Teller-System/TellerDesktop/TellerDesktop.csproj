@@ -23,6 +23,7 @@
     <None Remove="Resources\Images\Company.png" />
     <None Remove="Resources\Images\CurrencyTag.png" />
     <None Remove="Resources\Images\Delete.png" />
+    <None Remove="Resources\Images\DetailedAccountStatement.png" />
     <None Remove="Resources\Images\Dots.png" />
     <None Remove="Resources\Images\Edit.png" />
     <None Remove="Resources\Images\ExchangeRate.png" />
@@ -32,6 +33,7 @@
     <None Remove="Resources\Images\LeftArrow.png" />
     <None Remove="Resources\Images\Notebook.png" />
     <None Remove="Resources\Images\PaymentVoucher.png" />
+    <None Remove="Resources\Images\QuickAccountStatement.png" />
     <None Remove="Resources\Images\RightArrow.png" />
     <None Remove="Resources\Images\Save.png" />
     <None Remove="Resources\Images\Search.png" />
@@ -63,6 +65,7 @@
     <Resource Include="Resources\Images\Company.png" />
     <Resource Include="Resources\Images\CurrencyTag.png" />
     <Resource Include="Resources\Images\Delete.png" />
+    <Resource Include="Resources\Images\DetailedAccountStatement.png" />
     <Resource Include="Resources\Images\Dots.png" />
     <Resource Include="Resources\Images\Edit.png" />
     <Resource Include="Resources\Images\ExchangeRate.png" />
@@ -72,6 +75,7 @@
     <Resource Include="Resources\Images\LeftArrow.png" />
     <Resource Include="Resources\Images\Notebook.png" />
     <Resource Include="Resources\Images\PaymentVoucher.png" />
+    <Resource Include="Resources\Images\QuickAccountStatement.png" />
     <Resource Include="Resources\Images\RightArrow.png" />
     <Resource Include="Resources\Images\Save.png" />
     <Resource Include="Resources\Images\Search.png" />

@@ -12,6 +12,7 @@ namespace TellerDesktop
         public string Name { get; set; }
         public Currency MainCurrency { get; set; }
         public FinancialAccount FinancialAccount { get; set; }
+        public string TypeName { get; set; } = "فروع";
 
         public Branch()
         {
