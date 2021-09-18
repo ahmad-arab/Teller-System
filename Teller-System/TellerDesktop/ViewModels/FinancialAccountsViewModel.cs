@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace TellerDesktop
 {
@@ -32,6 +33,10 @@ namespace TellerDesktop
 
         #endregion
 
+        #region Commands
+        public ICommand ShowAccountQickStatementCommand { get; set; }
+        #endregion
+
         #region Constructor
         public FinancialAccountsViewModel()
         {
@@ -44,6 +49,18 @@ namespace TellerDesktop
             FinancialAccountOwners.AddRange(DataProvider.GetEmployees());
 
             ViewFinancialAccountOwners = FinancialAccountOwners;
+
+            ShowAccountQickStatementCommand = new RelayCommand(OnShowAccountQuickStatement);
+        }
+        #endregion
+
+        #region Methods
+        public void OnShowAccountQuickStatement(object param)
+        {
+            var c = new ShowAccountBalanceView();
+            IFinancialAccountOwner fa = (IFinancialAccountOwner)param;
+            c.DataContext = new ShowAccountBalanceViewModel(fa.FinancialAccount);
+            ContentWindow = c;
         }
         #endregion
     }

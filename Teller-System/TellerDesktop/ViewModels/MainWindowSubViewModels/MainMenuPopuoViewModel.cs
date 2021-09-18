@@ -18,6 +18,7 @@ namespace TellerDesktop
 
         public ICommand MainMenuCommand { get; set; }
         public ICommand CompanyCommand { get; set; }
+        public ICommand TransactionCommand { get; set; }
         public ICommand AccountsCommand { get; set; }
         public ICommand VouchersCommand { get; set; }
         public ICommand NoteBookCommand { get; set; }
@@ -40,6 +41,7 @@ namespace TellerDesktop
 
             MainMenuCommand = new RelayCommand(MainMenuButtonClicked);
             CompanyCommand = new RelayCommand(OnCompanyButtonClicked);
+            TransactionCommand = new RelayCommand(OnTransactionButtonClicked);
             AccountsCommand = new RelayCommand(OnAccountsButtonClicked);
             VouchersCommand = new RelayCommand(OnVouchersButtonClicked);
             NoteBookCommand = new RelayCommand(OnNoteBookButtonClicked);
@@ -61,10 +63,17 @@ namespace TellerDesktop
         public void OnCompanyButtonClicked(object param)
         {
             InvokeMainMenuButtonClickedEvent("Company");
+            HideSubMenus();
+        }
+        public void OnTransactionButtonClicked(object param)
+        {
+            InvokeMainMenuButtonClickedEvent("Transaction");
+            HideSubMenus();
         }
         public void OnAccountsButtonClicked(object param)
         {
             InvokeMainMenuButtonClickedEvent("Accounts");
+            HideSubMenus();
         }
         public void OnVouchersButtonClicked(object param)
         {
@@ -102,11 +111,14 @@ namespace TellerDesktop
         public void OnNoteBookButtonClicked(object param)
         {
             InvokeMainMenuButtonClickedEvent("NoteBook");
+            HideSubMenus();
         }
         public void OnExchangeRateButtonClicked(object param)
         {
             InvokeMainMenuButtonClickedEvent("ExchangeRate");
+            HideSubMenus();
         }
+
         public void HideSubMenus()
         {
             VouchersGridVisibility = Visibility.Hidden;

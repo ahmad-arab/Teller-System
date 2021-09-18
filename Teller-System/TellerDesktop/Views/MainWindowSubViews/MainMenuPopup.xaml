@@ -7,6 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="700" d:DesignWidth="400">
     <StackPanel>
+        <!--MainButton-->
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -24,6 +25,8 @@
                 </Button.Tag>
             </Button>
         </Grid>
+        
+        <!--MainGrid-->
         <Grid Visibility="{Binding GridVisiblity}">
             <Grid.Style>
                 <Style TargetType="Grid">
@@ -72,12 +75,14 @@
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition Width="200"/>
             </Grid.ColumnDefinitions>
+            <!--MainGridBorder-->
             <Border x:Name="ButtonsList" Grid.Row="0"
-                    Grid.RowSpan="5" Grid.Column="1"
+                    Grid.RowSpan="6" Grid.Column="1"
                     Background="{StaticResource MainDarkBrush}" CornerRadius="10"
                 Margin="5,5,5,5" BorderThickness="2" BorderBrush="{StaticResource MainLightBrush}">
                 
             </Border>
+            <!--CompanyButton-->
             <Button Grid.Column="1" Grid.Row="0" Margin="7,7,7,0"
                     Style="{StaticResource MainMenuSubButton}" 
                     Content="الشركة" HorizontalAlignment="Stretch"
@@ -86,7 +91,8 @@
                     <ImageSource>../../Resources/Images/Company.png</ImageSource>
                 </Button.Tag>
             </Button>
-            <Button Grid.Column="1" Grid.Row="1" Margin="7,0,7,0"
+            <!--AccountsButton-->
+            <Button Grid.Column="1" Grid.Row="2" Margin="7,0,7,0"
                     Style="{StaticResource MainMenuSubButton}" 
                     Content="الحسابات المالية" HorizontalAlignment="Stretch"
                     Command="{Binding AccountsCommand}">
@@ -94,7 +100,17 @@
                     <ImageSource>../../Resources/Images/Accounts.png</ImageSource>
                 </Button.Tag>
             </Button>
-            <Button Grid.Row="2" Grid.Column="1" Margin="7,0,7,0"
+            <!--TransactionsButton-->
+            <Button Grid.Row="1" Grid.Column="1" Margin="7,0,7,0"
+                    Style="{StaticResource MainMenuSubButton}" 
+                    Content="الحوالات المالية" HorizontalAlignment="Stretch"
+                    Command="{Binding TransactionCommand}">
+                <Button.Tag>
+                    <ImageSource>../../Resources/Images/Transaction.png</ImageSource>
+                </Button.Tag>
+            </Button>
+            <!--VouchersButton-->
+            <Button Grid.Row="3" Grid.Column="1" Margin="7,0,7,0"
                     Style="{StaticResource MainMenuSubButtonExpandable}" 
                     Content="السندات المالية" HorizontalAlignment="Stretch"
                     Command="{Binding VouchersCommand}">
@@ -102,7 +118,8 @@
                     <ImageSource>../../Resources/Images/Bounds.png</ImageSource>
                 </Button.Tag>
             </Button>
-            <Button Grid.Column="1" Grid.Row="3" Margin="7,0,7,0"
+            <!--NotebookButton-->
+            <Button Grid.Column="1" Grid.Row="4" Margin="7,0,7,0"
                     Style="{StaticResource MainMenuSubButton}" 
                         Content="المذكرة" HorizontalAlignment="Stretch"
                     Command="{Binding NoteBookCommand}">
@@ -110,7 +127,8 @@
                     <ImageSource>../../Resources/Images/Notebook.png</ImageSource>
                 </Button.Tag>
             </Button>
-            <Button Grid.Column="1"  Grid.Row="4" Margin="7,0,7,7"
+            <!--ExchangeRateButton-->
+            <Button Grid.Column="1"  Grid.Row="5" Margin="7,0,7,7"
                     Style="{StaticResource MainMenuSubButton}" 
                         Content="أسعار الصرف" HorizontalAlignment="Stretch"
                     Command="{Binding ExchangeRateCommand}">

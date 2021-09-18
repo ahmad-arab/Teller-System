@@ -40,6 +40,7 @@
     <None Remove="Resources\Images\StartupVoucher.png" />
     <None Remove="Resources\Images\TellerLogo.ico" />
     <None Remove="Resources\Images\TellerLogo.png" />
+    <None Remove="Resources\Images\Transaction.png" />
     <None Remove="Resources\Images\Undo.png" />
   </ItemGroup>
 
@@ -82,6 +83,7 @@
     <Resource Include="Resources\Images\StartupVoucher.png" />
     <Resource Include="Resources\Images\TellerLogo.ico" />
     <Resource Include="Resources\Images\TellerLogo.png" />
+    <Resource Include="Resources\Images\Transaction.png" />
     <Resource Include="Resources\Images\Undo.png" />
   </ItemGroup>
 
