@@ -28,6 +28,9 @@
     <Compile Update="Views\CompanySubViews\ShowBranchInfo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\TransactionsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Vouchers\CashVoucherView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -88,6 +91,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\CompanySubViews\ShowBranchInfo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\TransactionsView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Vouchers\CashVoucherView.xaml">

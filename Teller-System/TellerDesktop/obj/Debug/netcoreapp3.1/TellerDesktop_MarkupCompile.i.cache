@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\App.xaml
-20-1634156580
+21-1272327198
 
-561248634584
+571790248644
 1941028232726
-Resources\Styles\Buttons.xaml;Resources\Styles\Colors.xaml;Resources\Styles\ComboBoxes.xaml;Resources\Styles\DatePickers.xaml;Resources\Styles\Fonts.xaml;Resources\Styles\Tabs.xaml;Resources\Styles\TextBoxes.xaml;Views\CompanyInfoView.xaml;Views\CompanySubViews\AddNewBranch.xaml;Views\CompanySubViews\ShowBalance.xaml;Views\CompanySubViews\ShowBranchInfo.xaml;Views\FinancialAccountsSubViews\ShowAccountBalanceView.xaml;Views\FinancialAccountsView.xaml;Views\MainWindow.xaml;Views\MainWindowSubViews\MainMenuPopup.xaml;Views\Vouchers\CashVoucherView.xaml;Views\Vouchers\ExpendingVoucherView.xaml;Views\Vouchers\JournalVoucherView.xaml;Views\Vouchers\PaymentVoucherView.xaml;Views\Vouchers\StartupVoucherView.xaml;
+Resources\Styles\Buttons.xaml;Resources\Styles\Colors.xaml;Resources\Styles\ComboBoxes.xaml;Resources\Styles\DatePickers.xaml;Resources\Styles\Fonts.xaml;Resources\Styles\Tabs.xaml;Resources\Styles\TextBoxes.xaml;Views\CompanyInfoView.xaml;Views\CompanySubViews\AddNewBranch.xaml;Views\CompanySubViews\ShowBalance.xaml;Views\CompanySubViews\ShowBranchInfo.xaml;Views\FinancialAccountsSubViews\ShowAccountBalanceView.xaml;Views\FinancialAccountsView.xaml;Views\MainWindow.xaml;Views\MainWindowSubViews\MainMenuPopup.xaml;Views\TransactionsView.xaml;Views\Vouchers\CashVoucherView.xaml;Views\Vouchers\ExpendingVoucherView.xaml;Views\Vouchers\JournalVoucherView.xaml;Views\Vouchers\PaymentVoucherView.xaml;Views\Vouchers\StartupVoucherView.xaml;
 
-True
+False
 
