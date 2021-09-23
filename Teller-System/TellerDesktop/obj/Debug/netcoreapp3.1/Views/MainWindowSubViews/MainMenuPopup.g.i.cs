@@ -69,7 +69,7 @@ namespace TellerDesktop {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TellerDesktop;V1.0.0.0;component/views/mainwindowsubviews/mainmenupopup.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TellerDesktop;component/views/mainwindowsubviews/mainmenupopup.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\MainWindowSubViews\MainMenuPopup.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

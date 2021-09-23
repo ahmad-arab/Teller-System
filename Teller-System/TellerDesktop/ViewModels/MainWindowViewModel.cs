@@ -52,6 +52,11 @@ namespace TellerDesktop
                     fav.DataContext = new FinancialAccountsViewModel();
                     Tabs.Add(new TabItemViewModel("الحسابات المالية", fav));
                     break;
+                case "Transaction":
+                    TransactionsView tv = new TransactionsView();
+                    tv.DataContext = new TransactionsViewModel();
+                    Tabs.Add(new TabItemViewModel("الحوالات", tv));
+                    break;
             }
         }
     }
