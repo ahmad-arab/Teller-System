@@ -1,5 +1,7 @@
 ﻿
 FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\App.xaml;;
+FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\Dialogs\LoginView.xaml;;
+FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\Dialogs\PopUpMessageView.xaml;;
 FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\Views\CompanyInfoView.xaml;;
 FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\Views\CompanySubViews\AddNewBranch.xaml;;
 FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\Views\CompanySubViews\ShowBalance.xaml;;
@@ -8,10 +10,10 @@ FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\Views
 FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\Views\FinancialAccountsView.xaml;;
 FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\Views\MainWindow.xaml;;
 FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\Views\MainWindowSubViews\MainMenuPopup.xaml;;
+FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\Views\TransactionsView.xaml;;
 FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\Views\Vouchers\CashVoucherView.xaml;;
 FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\Views\Vouchers\ExpendingVoucherView.xaml;;
 FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\Views\Vouchers\JournalVoucherView.xaml;;
 FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\Views\Vouchers\PaymentVoucherView.xaml;;
 FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\Views\Vouchers\StartupVoucherView.xaml;;
-FC:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\Views\TransactionsView.xaml;;
 

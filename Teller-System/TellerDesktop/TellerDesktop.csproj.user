@@ -7,6 +7,12 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Dialogs\LoginView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Dialogs\PopUpMessageView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\FinancialAccountsSubViews\ShowAccountBalanceView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -48,6 +54,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Dialogs\LoginView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Dialogs\PopUpMessageView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\FinancialAccountsSubViews\ShowAccountBalanceView.xaml">
       <SubType>Designer</SubType>
     </Page>

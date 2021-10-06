@@ -10,6 +10,8 @@ namespace TellerDesktop
 {
     public class AddNewBranchViewModel:BaseViewModel
     {
+        public event EventHandler<NewBranchAddedEventArgs> NewBranchAdded;
+
         public ObservableCollection<Currency> Currencies { get; set; }
 
         public string BranchName { get; set; }
@@ -27,7 +29,8 @@ namespace TellerDesktop
 
         public void Accept(object param)
         {
-            MessageBox.Show("الاسم : " + BranchName + "\n" + "العملة : " + SelectedCurrency.Name);
+            PopUpMessageView.ShowMessage("تجربة", "تجربة للرسالة الرئيسية للللل لل صب كيهر صثعؤ خنهثب تنىؤثؤه تىهصثبه هىثب هىثب بهىهثبصثب هىهثصب هىقطصقب طججسيب لل ب بثث ",
+                "تجربة للرسالة ال هخحصثب كمنيبح نتعهصثبد أسخيب نتلايخث ـؤسيثصب منيسبث رئيسيةبث  بثبثبننننننةصثب بثب بثث ", PopUpMessageType.Question);
         }
     }
 }
