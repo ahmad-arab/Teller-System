@@ -8,6 +8,7 @@ namespace TellerDesktop
     {
         Question = 0,
         Error = 1,
-        Note = 2
+        Note = 2,
+        Success=3
     }
 }

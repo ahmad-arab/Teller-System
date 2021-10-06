@@ -16,11 +16,11 @@ namespace TellerDesktop
 
         public MainWindowViewModel()
         {
+            AppInitiator.InitiateApp();
+
             Tabs = new ObservableCollection<TabItemViewModel>();
             MainMenuDataContext = new MainMenuPopuoViewModel();
-            MainMenuDataContext.OnMainMenuButtonClicked+= MainMenuButtonClicked;
-
-
+            MainMenuDataContext.OnMainMenuButtonClicked+= MainMenuButtonClicked;            
         }
 
         private void MainMenuButtonClicked(object sender, MainMenuButtonClickedEventArgs e)

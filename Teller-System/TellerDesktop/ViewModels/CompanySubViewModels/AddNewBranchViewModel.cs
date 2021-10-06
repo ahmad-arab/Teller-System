@@ -11,6 +11,11 @@ namespace TellerDesktop
     public class AddNewBranchViewModel:BaseViewModel
     {
         public event EventHandler<NewBranchAddedEventArgs> NewBranchAdded;
+        private void TriggerNewBranchAddedEvent(Branch b)
+        {
+            NewBranchAddedEventArgs e = new NewBranchAddedEventArgs(b);
+            NewBranchAdded?.Invoke(this, e);
+        }
 
         public ObservableCollection<Currency> Currencies { get; set; }
 
@@ -29,8 +34,34 @@ namespace TellerDesktop
 
         public void Accept(object param)
         {
-            PopUpMessageView.ShowMessage("تجربة", "تجربة للرسالة الرئيسية للللل لل صب كيهر صثعؤ خنهثب تنىؤثؤه تىهصثبه هىثب هىثب بهىهثبصثب هىهثصب هىقطصقب طججسيب لل ب بثث ",
-                "تجربة للرسالة ال هخحصثب كمنيبح نتعهصثبد أسخيب نتلايخث ـؤسيثصب منيسبث رئيسيةبث  بثبثبننننننةصثب بثب بثث ", PopUpMessageType.Question);
+            Branch b = new Branch();
+            b.Name = BranchName;
+            b.MainCurrency = SelectedCurrency;
+            ValidationMessage vm =  DataProvider.ValidateNewBranch(b);
+            if(!vm.BoolianEquivalent)
+            {
+                switch(vm.Text)
+                {
+                    case "Branch name is empty":
+                        PopUpMessageView.ShowMessage("ملاحظة", "لقد أبقيت خانة الاسم فارغة، يجب إدخال اسم الفرع الجديد لكي تتم عملية الإضافة", "", PopUpMessageType.Note);
+                        break;
+                    case "Already exists":
+                        PopUpMessageView.ShowMessage("خطأ", "لم تتم إضافة الفرع الجديد بسبب وجود فرع آخر بنفس الاسم مسبقا", "أدخل اسماً مميزاً للفرع الجديد لكي لا يكون هناك تشابها في الأسماء", PopUpMessageType.Error);
+                        break;
+                    default:
+                        PopUpMessageView.ShowMessage("خطأ", "لم تتم إضافة الفرع الجديد لحدوث خطأ غير معلوم", "تواصل مع المطور للحصول على حل للمشكلة", PopUpMessageType.Error);
+                        break;
+                }
+            }
+            else
+            {
+                vm= DataProvider.AddNewBranch(b);
+                if(vm.BoolianEquivalent)
+                {
+                    TriggerNewBranchAddedEvent(b);
+                    PopUpMessageView.ShowMessage("نجاح", "تمت إضافة الفرع الجديد بنجاح","اسم الفرع: "+b.Name+"\n"+"العملة الرئيسية: "+b.MainCurrency.Name, PopUpMessageType.Success);
+                }
+            }
         }
     }
 }

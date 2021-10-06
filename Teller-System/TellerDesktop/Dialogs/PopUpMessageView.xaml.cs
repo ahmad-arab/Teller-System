@@ -58,6 +58,15 @@ namespace TellerDesktop
                     OkButton.Margin = new Thickness(0);
                     TheImage.Source = new BitmapImage(new Uri("pack://application:,,,/Resources/Images/Question.png"));
                     break;
+                case PopUpMessageType.Success:
+                    YesButton.Visibility = Visibility.Hidden;
+                    YesButton.Width = 0;
+                    YesButton.Margin = new Thickness(0);
+                    NoButton.Visibility = Visibility.Hidden;
+                    NoButton.Width = 0;
+                    NoButton.Margin = new Thickness(0);
+                    TheImage.Source = new BitmapImage(new Uri("pack://application:,,,/Resources/Images/Success.png"));
+                    break;
             }
         }
 

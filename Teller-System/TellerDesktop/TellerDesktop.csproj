@@ -41,6 +41,7 @@
     <None Remove="Resources\Images\Save.png" />
     <None Remove="Resources\Images\Search.png" />
     <None Remove="Resources\Images\StartupVoucher.png" />
+    <None Remove="Resources\Images\Success.png" />
     <None Remove="Resources\Images\TellerLogo.ico" />
     <None Remove="Resources\Images\TellerLogo.png" />
     <None Remove="Resources\Images\Transaction.png" />
@@ -87,6 +88,7 @@
     <Resource Include="Resources\Images\Save.png" />
     <Resource Include="Resources\Images\Search.png" />
     <Resource Include="Resources\Images\StartupVoucher.png" />
+    <Resource Include="Resources\Images\Success.png" />
     <Resource Include="Resources\Images\TellerLogo.ico" />
     <Resource Include="Resources\Images\TellerLogo.png" />
     <Resource Include="Resources\Images\Transaction.png" />

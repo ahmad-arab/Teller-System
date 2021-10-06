@@ -7,5 +7,10 @@ namespace TellerDesktop
     public class NewBranchAddedEventArgs
     {
         public Branch Branch { get; set; }
+
+        public NewBranchAddedEventArgs(Branch b)
+        {
+            Branch = b;
+        }
     }
 }

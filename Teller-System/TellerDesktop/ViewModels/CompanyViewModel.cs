@@ -195,10 +195,15 @@ namespace TellerDesktop
         #region Methods
         public void OnAddNewBranchCLicked(object param)
         {
-            Content = new AddNewBranch();
+            AddNewBranchViewModel anbvm = new AddNewBranchViewModel();
+            anbvm.NewBranchAdded += OnNewBranchAdded;
+            AddNewBranch anb = new AddNewBranch();
+            anb.DataContext = anbvm;
+            Content = anb;
         }
         public void OnShowBranchInfoCLicked(object param)
         {
+
             var c = new ShowBranchInfo();
             c.DataContext = new ShowBranchInfoViewModel((Branch)param);
             Content = c;
@@ -209,6 +214,14 @@ namespace TellerDesktop
             IFinancialAccountOwner fa = (IFinancialAccountOwner)param;
             c.DataContext = new ShowBalanceViewModel(fa.FinancialAccount);
             Content = c;
+        }
+        #endregion
+
+        #region Event Handlers
+        private void OnNewBranchAdded(object sender, NewBranchAddedEventArgs e)
+        {
+            ShownBranches = AllBranches = DataProvider.GetBrnaches();
+            SearchBranchText = "";
         }
         #endregion
     }

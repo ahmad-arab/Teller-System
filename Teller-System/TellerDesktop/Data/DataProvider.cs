@@ -1,15 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 
 namespace TellerDesktop
 {
     public static class DataProvider
     {
+        #region Branches
+        private static ObservableCollection<Branch> Branches = new ObservableCollection<Branch>();
         public static ObservableCollection<Branch> GetBrnaches()
         {
-            return new ObservableCollection<Branch> { new Branch { Id=1, Name="سوريا",MainCurrency=new Currency{Name="ليرة سورية" }, FinancialAccount = FinancialAccount.GetRandomAccount(1) },
+            return new ObservableCollection<Branch>(Branches.OrderBy(b => b.Name));
+        }
+        public static void UpdateBranchesFromDataBase()
+        {
+            Branches= new ObservableCollection<Branch> { new Branch { Id=1, Name="سوريا",MainCurrency=new Currency{Name="ليرة سورية" }, FinancialAccount = FinancialAccount.GetRandomAccount(1) },
                                       new Branch { Id=2, Name="ألمانيا",MainCurrency=new Currency{Name="يورو" }, FinancialAccount = FinancialAccount.GetRandomAccount(10) },
                                       new Branch { Id=3, Name="دانمارك",MainCurrency=new Currency{Name="كرون" }, FinancialAccount = FinancialAccount.GetRandomAccount(100) },
                                       new Branch { Id=4, Name="يونان",MainCurrency=new Currency{Name="يورو" } , FinancialAccount = FinancialAccount.GetRandomAccount(3)},
@@ -17,6 +24,39 @@ namespace TellerDesktop
                                       new Branch { Id=6, Name="لبنان",MainCurrency=new Currency{Name="دولار" }, FinancialAccount = FinancialAccount.GetRandomAccount(90) },
                                       new Branch { Id=7, Name="سويد",MainCurrency=new Currency{Name="يورو" }, FinancialAccount = FinancialAccount.GetRandomAccount(86)} };
         }
+        public static ValidationMessage AddNewBranch(Branch branch)
+        {
+            Branches.Add(new Branch { Id = 10, Name = branch.Name, MainCurrency = branch.MainCurrency, FinancialAccount = FinancialAccount.GetRandomAccount(283) });
+            return new ValidationMessage("The new branch has been added",true);
+        }
+        public static ValidationMessage ValidateNewBranch(Branch branch)
+        {
+            if (branch == null) return new ValidationMessage("Null value", false);
+            if (string.IsNullOrWhiteSpace(branch.Name)) return new ValidationMessage("Branch name is empty", false);
+            if (branch.MainCurrency == null) return new ValidationMessage("Branch main currency is null", false);
+            foreach(Branch b in Branches)
+            {
+                if(b.Name == branch.Name)
+                {
+                    return new ValidationMessage("Already exists",false);
+                }
+            }
+
+            bool mainCurrencyExists = false;
+            foreach(Currency c in Currencies)
+            {
+                if(c == branch.MainCurrency)
+                {
+                    mainCurrencyExists = true;
+                    break;
+                }
+            }
+            if (!mainCurrencyExists) return new ValidationMessage("Main currency does not exists", false);
+
+            return new ValidationMessage("Brnach is OK", true);
+        }
+        #endregion
+
         public static ObservableCollection<Rep> GetReps()
         {
             return new ObservableCollection<Rep> { new Rep {Id =1, Branch = new Branch{ Id=1, Name="سوريا" }, Name="عبد الواحد أحمدي", OfficeName="مكتب الفجر", City="الحسكة", Country="سوريا", Email="...",
@@ -36,25 +76,18 @@ namespace TellerDesktop
         }
 
         #region Currencies
-        public static ObservableCollection<Currency> Currencies = new ObservableCollection<Currency>();
+        private static ObservableCollection<Currency> Currencies = new ObservableCollection<Currency>();
         public static ObservableCollection<Currency> GetCurrencies()
         {
-            return new ObservableCollection<Currency> { Currency.GetRandomCurrencies()[0],
+            return new ObservableCollection<Currency>(Currencies.OrderBy(c => c.Name));
+        }
+        public static void UpdateCurrenciesfromDataBase()
+        {
+            Currencies = new ObservableCollection<Currency> { Currency.GetRandomCurrencies()[0],
                                         Currency.GetRandomCurrencies()[1],
                                         Currency.GetRandomCurrencies()[2],
                                         Currency.GetRandomCurrencies()[3],
                                         Currency.GetRandomCurrencies()[4]};
-        }
-        public static void UpdateCurrencies()
-        {
-            Currencies = new ObservableCollection<Currency> { new Currency { Name = "ليرة سورية" },
-                                        new Currency { Name = "دولار" },
-                                        new Currency { Name = "يورو" },
-                                        new Currency { Name = "كرون" },
-                                        new Currency { Name = "بيزو" },
-                                        new Currency { Name = "روبل" },
-                                        new Currency { Name = "دولار كندي" },
-                                        new Currency { Name = "ليرة لبناني" },};
         }
         #endregion
 

@@ -1,3 +1,10 @@
+C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\bin\Debug\netcoreapp3.1\TellerDesktop.exe
+C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\bin\Debug\netcoreapp3.1\TellerDesktop.deps.json
+C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\bin\Debug\netcoreapp3.1\TellerDesktop.runtimeconfig.json
+C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\bin\Debug\netcoreapp3.1\TellerDesktop.runtimeconfig.dev.json
+C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\bin\Debug\netcoreapp3.1\TellerDesktop.dll
+C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\bin\Debug\netcoreapp3.1\TellerDesktop.pdb
+C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\bin\Debug\netcoreapp3.1\Microsoft.Xaml.Behaviors.dll
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Resources\Styles\Buttons.baml
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Resources\Styles\Colors.baml
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Resources\Styles\ComboBoxes.baml
@@ -5,6 +12,8 @@ C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\De
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Resources\Styles\Fonts.baml
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Resources\Styles\Tabs.baml
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Resources\Styles\TextBoxes.baml
+C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Dialogs\LoginView.g.cs
+C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Dialogs\PopUpMessageView.g.cs
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Views\CompanyInfoView.g.cs
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Views\CompanySubViews\AddNewBranch.g.cs
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Views\CompanySubViews\ShowBalance.g.cs
@@ -23,16 +32,6 @@ C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\De
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\TellerDesktop_MarkupCompile.cache
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\TellerDesktop_MarkupCompile.lref
-C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\bin\Debug\netcoreapp3.1\TellerDesktop.exe
-C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\bin\Debug\netcoreapp3.1\TellerDesktop.deps.json
-C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\bin\Debug\netcoreapp3.1\TellerDesktop.runtimeconfig.json
-C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\bin\Debug\netcoreapp3.1\TellerDesktop.runtimeconfig.dev.json
-C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\bin\Debug\netcoreapp3.1\TellerDesktop.dll
-C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\bin\Debug\netcoreapp3.1\TellerDesktop.pdb
-C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\bin\Debug\netcoreapp3.1\Microsoft.Xaml.Behaviors.dll
-C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\TellerDesktop.csproj.AssemblyReference.cache
-C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Dialogs\LoginView.g.cs
-C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Dialogs\PopUpMessageView.g.cs
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\App.baml
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Dialogs\LoginView.baml
 C:\Users\Abo_Arrab\source\repos\Teller-System\Teller-System\TellerDesktop\obj\Debug\netcoreapp3.1\Dialogs\PopUpMessageView.baml
